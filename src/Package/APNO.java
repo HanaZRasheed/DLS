@@ -344,6 +344,10 @@ public class APNO extends Vars {
 		Select BuyerName1 = new Select(driver.findElement(BuyerName)); // اسم المشتري
 		BuyerName1.selectByValue("0");
 		Thread.sleep(Const * 10);
+		
+		//Add button 
+		Thread.sleep(Const * 10);
+		driver.findElement(addButton).click();
 		// wife full name
 		driver.findElement(spousefirstName).sendKeys("نوف");   
 		Thread.sleep(Const);
@@ -359,9 +363,6 @@ public class APNO extends Vars {
 		SpouseNationality.selectByValue("1");
 		Thread.sleep(Const);
 		
-		//Add button 
-		Thread.sleep(Const * 10);
-		driver.findElement(addButton).click();
 		
 		// Wife'sMom Full Name
 		driver.findElement(spouseMomfirstName).sendKeys("أمل");   
