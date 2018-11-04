@@ -99,8 +99,20 @@ public class fields  {
 	
 	// معلومات الزوجة / الزوج
 	By BuyerName=By.id("pt1:r1:2:soc4::content");
-	By addButton=By.xpath("//*[@id=\"pt1:r1:2:b5\"]/a");
+	By addButton=By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[11]/table/tbody/tr/td[2]/div/a");
 	By deleteButton=By.xpath("//*[@id=\"pt1:r1:2:b4\"]/a");
+	By spousefirstName=By.id("pt1:r1:1:it3::content");
+	By spouseSecondName=By.id("pt1:r1:1:it4::content");
+	By spouseThirdName=By.id("pt1:r1:1:it5::content");
+	By spouseLastName=By.id("pt1:r1:1:it14::content");
+	By spouseNationality=By.id("pt1:r1:1:soc2::content");
+	By spouseMomfirstName=By.id("pt1:r1:1:it12::content");
+	By spouseMomSecondName=By.id("pt1:r1:1:it10::content");
+	By spouseMomThirdName=By.id("pt1:r1:1:it11::content");
+	By spouseMomFourthName=By.id("pt1:r1:1:it13::content");
+	By spouseMomNationality=By.id("pt1:r1:1:soc3::content");
+	
+	
 	
 	
 	// معلومات العقار/العقارات المُراد شراؤها
@@ -125,7 +137,7 @@ public class fields  {
 	By chooseFile7=By.xpath(""); // هوية الاحوال المدنية
 	By NEXT=By.id("pt1:r1:2:b466666666"); // التالي
 	
-	//
+	// ربط المشتريين مع البائعين
 	By buyerName=By.id("pt1:r1:3:soc2::content"); // اسم المشتري
 	By Properties2=By.id("pt1:r1:3:soc1::content"); //العقارات	
 	By ownerName=By.id("pt1:r1:3:soc3::content");// اسم المالك

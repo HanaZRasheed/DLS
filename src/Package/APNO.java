@@ -48,18 +48,20 @@ public class APNO extends VARs {
 	
 	
   }
-  // موافقة تملّك لغير الأردنيين
-  // مقدم الطلب 
-  @Test
-  public void NonJordanianPropertyApproval() throws InterruptedException, IOException
-  {
+
+  
+//موافقة تملّك لغير الأردنيين
+ // مقدم الطلب 
+@Test
+ public void Case4_0_0_0() throws InterruptedException, IOException // الجهة التنظيمية امانة عمان الكبرى
+ {
 		driver.findElement(NonJordanianPropertyApproval).click(); // موافقات التملك لغير الاردنين
 		Thread.sleep(Const*8);
 		driver.findElement(validationCode).sendKeys(verificationCodeContent); // رمز التحقق
 		Thread.sleep(Const*8);
 		
 		driver.findElement(continueButton).click(); // استمرار
-		Thread.sleep(Const*10);
+		Thread.sleep(Const*15);
 		
 		driver.findElement(ApprovalcheckBox).click();  // موافقة
 		Thread.sleep(Const*10 );
@@ -88,7 +90,7 @@ public class APNO extends VARs {
 		
 		driver.findElement(next).click();
 
-		Thread.sleep(Const * 5);
+		Thread.sleep(Const * 10);
 	
 		// معلومات المشتري
 		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
@@ -149,7 +151,7 @@ public class APNO extends VARs {
 		Thread.sleep(Const*3);
 
 		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
-		SocialStatusDDL.selectByVisibleText(single); 
+		SocialStatusDDL.selectByVisibleText(married); 
 		Thread.sleep(Const*3);
 
 		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
@@ -201,6 +203,45 @@ public class APNO extends VARs {
 		driver.findElement(Nxt).click();
 		Thread.sleep(Const*5);
 		
+		driver.findElement(addButton).click();
+		Thread.sleep(Const*5);
+		// معلومات الو
+		driver.findElement(spousefirstName).sendKeys(spousefirstNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseSecondName).sendKeys(spouseSecondNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseThirdName).sendKeys(spouseThirdNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseLastName).sendKeys(spouselastNameContent); 
+		Thread.sleep(Const*10);
+		
+		Select spouseNationalityDDL = new Select(driver.findElement(spouseNationality)); // جنسية الزوجة 
+		spouseNationalityDDL.selectByVisibleText(Jordanian); 
+		Thread.sleep(Const);
+	
+		
+		driver.findElement(spouseMomfirstName).sendKeys(spouseMomfirstNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseMomSecondName).sendKeys(spouseMomSecondNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseMomThirdName).sendKeys(spouseMomThirdNameContent); 
+		Thread.sleep(Const*10);
+		
+		driver.findElement(spouseMomFourthName).sendKeys(spouseMomlastNameContent); 
+		Thread.sleep(Const*10);
+		
+		Select spouseMomNationalityDDL = new Select(driver.findElement(spouseMomNationality)); // جنسية أم  الزوجة 
+		spouseMomNationalityDDL.selectByVisibleText(Jordanian); 
+		Thread.sleep(Const);
+		
+		
+		
+		/*
 		driver.findElement(recordNo).sendKeys(recordNoContent); 
 		Thread.sleep(Const*10);
 		
@@ -211,19 +252,19 @@ public class APNO extends VARs {
 		Thread.sleep(Const*10);
 		
 		driver.findElement(checkowners).click();
-		Thread.sleep(Const*5);
+		Thread.sleep(Const*8);
 		
 		driver.findElement(checkOwners).click();
-		Thread.sleep(Const*5);
+		Thread.sleep(Const*8);
 		
-		driver.findElement(choosefile2).click();
+		driver.findElement(choosefile2).click(); // سند التسجيل
 		Thread.sleep(Const*5);
 		
 //		Runtime.getRuntime().exec("\\C:\\Users\\hrasheed\\Documents\\File2.exe"); // Chrome
 		Runtime.getRuntime().exec("C:\\Users\\hrasheed\\Documents\\FileUploadFirfox.exe"); // Firefox
 		Thread.sleep(Const *10);
 		
-		driver.findElement(choosefile3).click();
+		driver.findElement(choosefile3).click(); // مخطط الأراضي
 		Thread.sleep(Const*5);
 		
 //		Runtime.getRuntime().exec("\\C:\\Users\\hrasheed\\Documents\\File2.exe"); // Chrome
@@ -236,19 +277,23 @@ public class APNO extends VARs {
 		Runtime.getRuntime().exec("C:\\Users\\hrasheed\\Documents\\FileUploadFirfox.exe"); // Firefox
 		Thread.sleep(Const *15);
 		
-		driver.findElement(choosefile5).click();
+		driver.findElement(choosefile5).click();   // شهادة تسجيل الشركة
 		Thread.sleep(Const*5);
 		//	Runtime.getRuntime().exec("\\C:\\Users\\hrasheed\\Documents\\File2.exe"); // Chrome
 		Runtime.getRuntime().exec("C:\\Users\\hrasheed\\Documents\\FileUploadFirfox.exe"); // Firefox
 		Thread.sleep(Const *15);
 		
-	driver.findElement(choosefile6).click();
+	driver.findElement(choosefile6).click(); // رخصة المهن 
 	Thread.sleep(Const*5);
 	//	Runtime.getRuntime().exec("\\C:\\Users\\hrasheed\\Documents\\File2.exe"); // Chrome
 		Runtime.getRuntime().exec("C:\\Users\\hrasheed\\Documents\\FileUploadFirfox.exe"); // Firefox
 		Thread.sleep(Const *15);
+		
+		driver.findElement(next).click(); 	//  التالي
+*/
+ }
+ 
 
-  }
   
   @AfterMethod(enabled =false, groups = {"StartRNVL"})
 	public void End(ITestResult result) throws InterruptedException {

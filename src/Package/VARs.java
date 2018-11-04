@@ -114,6 +114,18 @@ public class VARs extends fields{
 		String married="متزوج";
 		String divorced="مطلق";
 		
+		
+		// متزوج
+		String spousefirstNameContent="ع";
+		String spouseSecondNameContent="ز";
+		String spouseThirdNameContent="ع";
+		String spouselastNameContent="ر";
+		
+		String spouseMomfirstNameContent="ع";
+		String spouseMomSecondNameContent="ز";
+		String spouseMomThirdNameContent="ع";
+		String spouseMomlastNameContent="ر";
+		
  // معلومات العقار/العقارات المُراد شراؤها
 		String recordNoContent="1-6BAE1P";// البحث عن طريق رقم القيد
 
