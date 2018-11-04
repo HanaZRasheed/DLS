@@ -58,7 +58,7 @@ public class APNO extends VARs {
 		driver.findElement(NonJordanianPropertyApproval).click(); // موافقات التملك لغير الاردنين
 		Thread.sleep(Const*8);
 		driver.findElement(validationCode).sendKeys(verificationCodeContent); // رمز التحقق
-		Thread.sleep(Const*8);
+		Thread.sleep(Const*10);
 		
 		driver.findElement(continueButton).click(); // استمرار
 		Thread.sleep(Const*15);
@@ -82,7 +82,7 @@ public class APNO extends VARs {
 
 		Select PurposeOfPossessionDDL = new Select(driver.findElement(PurposeOfPossession)); // الغاية من التملك
 		PurposeOfPossessionDDL.selectByVisibleText(FinanceLease); 
-		Thread.sleep(Const*5);
+		Thread.sleep(Const*10);
 		
 		Select SecondaryPurposeOfPossessionDDL = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية من التملك
 		SecondaryPurposeOfPossessionDDL.selectByVisibleText(CombineAreas); 
@@ -201,11 +201,16 @@ public class APNO extends VARs {
 		Thread.sleep(Const *10);
 		
 		driver.findElement(Nxt).click();
-		Thread.sleep(Const*5);
+		Thread.sleep(Const*10);
 		
 		driver.findElement(addButton).click();
-		Thread.sleep(Const*5);
-		// معلومات الو
+		Thread.sleep(Const*10);
+		// معلومات الزوج أو الوزجة
+	
+		Select BuyerNameDDL = new Select(driver.findElement(BuyerName)); //جنسية أخرى
+		BuyerNameDDL.selectByValue("0"); 
+			Thread.sleep(Const);
+		
 		driver.findElement(spousefirstName).sendKeys(spousefirstNameContent); 
 		Thread.sleep(Const*10);
 		
@@ -218,12 +223,12 @@ public class APNO extends VARs {
 		driver.findElement(spouseLastName).sendKeys(spouselastNameContent); 
 		Thread.sleep(Const*10);
 		
-		Select spouseNationalityDDL = new Select(driver.findElement(spouseNationality)); // جنسية الزوجة 
+		Select spouseNationalityDDL = new Select(driver.findElement(spouseNationality)); //   جنسية الزوجة او الزوج 
 		spouseNationalityDDL.selectByVisibleText(Jordanian); 
 		Thread.sleep(Const);
 	
 		
-		driver.findElement(spouseMomfirstName).sendKeys(spouseMomfirstNameContent); 
+		driver.findElement(spouseMomfirstName).sendKeys(spouseMomfirstNameContent); //  معلومات ام الزوج أو الزوجة
 		Thread.sleep(Const*10);
 		
 		driver.findElement(spouseMomSecondName).sendKeys(spouseMomSecondNameContent); 
@@ -239,9 +244,10 @@ public class APNO extends VARs {
 		spouseMomNationalityDDL.selectByVisibleText(Jordanian); 
 		Thread.sleep(Const);
 		
+		driver.findElement(NextButton).click(); 
 		
-		
-		/*
+		Thread.sleep(Const*20);
+	
 		driver.findElement(recordNo).sendKeys(recordNoContent); 
 		Thread.sleep(Const*10);
 		
@@ -290,7 +296,7 @@ public class APNO extends VARs {
 		Thread.sleep(Const *15);
 		
 		driver.findElement(next).click(); 	//  التالي
-*/
+
  }
  
 

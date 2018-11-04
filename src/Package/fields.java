@@ -98,9 +98,9 @@ public class fields  {
 	
 	
 	// معلومات الزوجة / الزوج
-	By BuyerName=By.id("pt1:r1:2:soc4::content");
-	By addButton=By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[11]/table/tbody/tr/td[2]/div/a");
-	By deleteButton=By.xpath("//*[@id=\"pt1:r1:2:b4\"]/a");
+	By BuyerName=By.id("pt1:r1:1:soc4::content");
+	By addButton=By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span");
+	By deleteButton=By.xpath("//*[@id=\"pt1:r1:1:b4\"]/a/span");
 	By spousefirstName=By.id("pt1:r1:1:it3::content");
 	By spouseSecondName=By.id("pt1:r1:1:it4::content");
 	By spouseThirdName=By.id("pt1:r1:1:it5::content");
@@ -111,15 +111,15 @@ public class fields  {
 	By spouseMomThirdName=By.id("pt1:r1:1:it11::content");
 	By spouseMomFourthName=By.id("pt1:r1:1:it13::content");
 	By spouseMomNationality=By.id("pt1:r1:1:soc3::content");
-	
+	By NextButton=By.xpath("//*[@id=\"pt1:r1:1:b2\"]/a/span");
 	
 	
 	
 	// معلومات العقار/العقارات المُراد شراؤها
-	By recordNo=By.id("pt1:r1:1:it25::content");	// رقم القيد  
+	By recordNo=By.id("pt1:r1:2:it25::content");	// رقم القيد  
 	
-	By schemeNo=By.id("pt1:r1:1:it1::content"); //الرقم المميز للمخطط
-	By SearchButton=By.id("pt1:r1:1:cb1"); //    button البحث عن طريق رقم القيد
+	By schemeNo=By.id("pt1:r1:2:it1::content"); //الرقم المميز للمخطط
+	By SearchButton=By.id("pt1:r1:2:cb1"); //    button البحث عن طريق رقم القيد
 	By addPropertyButton=By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span"); // اضافة عقار
 	By checkowners=By.id("pt1:r1:1:pc2:t5:0:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
 	By checkOwners=By.id("pt1:r1:1:pc2:t5:1:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
@@ -144,7 +144,7 @@ public class fields  {
 	By areatoBeOwnedNum=By.id("pt1:r1:3:it11::content"); //المساحة المراد تملكها رقما 	
 	By areatoBeOwned=By.id("pt1:r1:3:it1::content"); // المساحة المراد تملكها كتابة	
 	By numberofProportions=By.id("pt1:r1:3:it9::content"); //الحصص المراد تملكها رقما
-	By Next=By.xpath(""); //  التالي 
+	By Next=By.id(""); //  التالي 
 	
 	// مراجعة الطلب
 	By submitRequest=By.xpath(""); // تقديم طلب  
