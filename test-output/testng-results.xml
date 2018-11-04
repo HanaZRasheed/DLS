@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-11-01T11:54:24Z" name="Default suite" finished-at="2018-11-01T11:54:41Z" duration-ms="16819">
+  <suite started-at="2018-11-04T07:09:32Z" name="Default suite" finished-at="2018-11-04T07:11:44Z" duration-ms="131783">
     <groups>
     </groups>
-    <test started-at="2018-11-01T11:54:24Z" name="Default test" finished-at="2018-11-01T11:54:41Z" duration-ms="16819">
+    <test started-at="2018-11-04T07:09:32Z" name="Default test" finished-at="2018-11-04T07:11:44Z" duration-ms="131783">
       <class name="Package.APNO">
-        <test-method is-config="true" signature="Login()[pri:0, instance:Package.APNO@1dac5ef]" started-at="2018-11-01T11:54:24Z" name="Login" finished-at="2018-11-01T11:54:37Z" duration-ms="12475" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:Package.APNO@1dac5ef]" started-at="2018-11-04T07:09:32Z" name="Login" finished-at="2018-11-04T07:09:47Z" duration-ms="14095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="NonJordanianPropertyApproval()[pri:0, instance:Package.APNO@1dac5ef]" started-at="2018-11-01T11:54:37Z" name="NonJordanianPropertyApproval" finished-at="2018-11-01T11:54:41Z" duration-ms="4318" status="FAIL">
+        <test-method signature="Case4_0_0_0()[pri:0, instance:Package.APNO@1dac5ef]" started-at="2018-11-04T07:09:47Z" name="Case4_0_0_0" finished-at="2018-11-04T07:11:44Z" duration-ms="117641" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[Element <input id="pt1:s1:it15::content" class="x25" name="pt1:s1:it15" type="text"> is not reachable by keyboard
+              <![CDATA[Element <span id="pt1:r1:1:it3::content" class="x25"> is not reachable by keyboard
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
 System info: host: 'JO02MW480', ip: '172.16.1.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 18072, moz:profile: C:\Users\hrasheed\AppData\L..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e5e782f4-ad47-435d-9e0a-82fdbb7c0b58]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 696, moz:profile: C:\Users\hrasheed\AppData\L..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4e6b73f3-523b-435a-b190-94c4bf75a4e7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <input id="pt1:s1:it15::content" class="x25" name="pt1:s1:it15" type="text"> is not reachable by keyboard
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <span id="pt1:r1:1:it3::content" class="x25"> is not reachable by keyboard
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
 System info: host: 'JO02MW480', ip: '172.16.1.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.2'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 18072, moz:profile: C:\Users\hrasheed\AppData\L..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e5e782f4-ad47-435d-9e0a-82fdbb7c0b58
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 63.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 696, moz:profile: C:\Users\hrasheed\AppData\L..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4e6b73f3-523b-435a-b190-94c4bf75a4e7
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -40,7 +40,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
 at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-at Package.APNO.NonJordanianPropertyApproval(APNO.java:58)
+at Package.APNO.Case4_0_0_0(APNO.java:209)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,7 +71,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NonJordanianPropertyApproval -->
+        </test-method> <!-- Case4_0_0_0 -->
       </class> <!-- Package.APNO -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
