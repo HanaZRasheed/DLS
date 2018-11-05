@@ -1,3 +1,5 @@
+
+    
 package Package;
 
 public class VARs extends fields{
@@ -24,32 +26,33 @@ public class VARs extends fields{
 		
 		
 		// PurposeOfPossession DDL options
-		String Residential="سكن";
-		String Agriculture="زراعة";
-		String industry="صناعة";
-		String FinanceLease="تأجير تمويلي";
-		String Commercial_Office="تجارية_مكاتب";
-		String RepairnadDischargeDevelopment="اصلاح وافراز وتطوير";
-		
-		
-		// SecondaryPurposeOfPossession DDL options - Residential
-		String utilizationOfBuilding ="استغلال البناء المقام";
-		String OtherPurposes="اخرى";
-		String Residence="سكن";
-		String expansion="توسعه";
-		
-		//// SecondaryPurposeOfPossession DDL options - Agriculture
-		String plantationConstruction= "انشاء مشتل";
-		String AgriculturePurpose="الزراعة";
-		
-		// SecondaryPurposeOfPossession DDL options - industry
-		String FactoryConstruction="إقامة مصنع";
-		
-		// SecondaryPurposeOfPossession DDL options - Commercial_Office
-		String office="مكتب";
-		
-		//  SecondaryPurposeOfPossession DDL options - FinanceLease
-		String CombineAreas ="ضم القطعه للقطعه المجاورة";
+				String Residential="سكن";
+				String Agriculture="زراعة";
+				String industry="صناعة";
+				String FinanceLease="تأجير تمويلي";
+				String Commercial_Office="تجارية_مكاتب"; //ادارة أعمال
+				String RepairnadDischargeDevelopment="اصلاح وافراز وتطوير";
+				String BussinessAdministration = "مكتب لأدارة اعماله";
+				
+				// SecondaryPurposeOfPossession DDL options - Residential
+				String utilizationOfBuilding ="استغلال البناء المقام";
+				String OtherPurposes="اخرى";
+				String Residence="سكن";
+				String expansion="توسعه";
+			
+				
+				//// SecondaryPurposeOfPossession DDL options - Agriculture
+				String plantationConstruction= "انشاء مشتل";
+				String AgriculturePurpose="الزراعة";
+				
+				// SecondaryPurposeOfPossession DDL options - industry
+				String FactoryConstruction="إقامة مصنع";
+				
+				// SecondaryPurposeOfPossession DDL options - Commercial_Office
+				String office="مكتب";
+				
+				//  SecondaryPurposeOfPossession DDL options - FinanceLease
+				String CombineAreas ="ضم القطعه للقطعه المجاورة";
 		
 
 		
@@ -113,6 +116,18 @@ public class VARs extends fields{
 		String widow="ارمل";
 		String married="متزوج";
 		String divorced="مطلق";
+		
+		
+		// متزوج
+		String spousefirstNameContent="ع";
+		String spouseSecondNameContent="ز";
+		String spouseThirdNameContent="ع";
+		String spouselastNameContent="ر";
+		
+		String spouseMomfirstNameContent="ع";
+		String spouseMomSecondNameContent="ز";
+		String spouseMomThirdNameContent="ع";
+		String spouseMomlastNameContent="ر";
 		
  // معلومات العقار/العقارات المُراد شراؤها
 		String recordNoContent="1-6BAE1P";// البحث عن طريق رقم القيد
