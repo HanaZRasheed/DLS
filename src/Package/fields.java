@@ -44,15 +44,16 @@ public class fields {
 
 		// Attachments on Purchaser info screen
 		By IDCard = By.className("x22j"); // هوية أحوال مدنية
-		By Passport = By.cssSelector("#pt1\\3a r1\\3a 0\\3a pc1\\3a t2\\3a 0\\3a pgl50 > tbody > tr > td:nth-child(3) > span");// جواز سفر
+		By Passport = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
 		By SecurityCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:4:pgl50\"]/tbody/tr/td[3]/span");// بطاقة أمنية
 		By ResidenceCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:2:pgl50\"]/tbody/tr/td[3]/span");// بطاقة إقامة
 		By Others = By.xpath("");
 
 		// Attachments on Property Info screen
 		By OrganizationalChart = By.xpath("//*[@id=\\\"pt1:r1:1:pc1:t2:2:pgl50\\\"]/tbody/tr/td[3]/span");// مخطط موقع تنظيمي
-		By CoRegistrationCertificate = By.xpath("//*[@id=\\\"pt1:r1:1:pc1:t2:2:pgl50\\\"]/tbody/tr/td[3]/span");// شهادة تسجيل الشركة
+		By CoRegistrationCertificate = By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:3:pgl50\"]/tbody/tr/td[3]/span");// شهادة تسجيل الشركة
 		By ProfessionLicense = By.xpath("//*[@id=\\\"pt1:r1:1:pc1:t2:3:pgl50\\\"]/tbody/tr/td[3]/span");// رخصة المهن
+		By RegistrationPolicy=By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // سند تسجيل
 		By Lamane3 = By.xpath("");// كتاب لا مانع
 		By Others2 = By.xpath("");
 		
@@ -119,8 +120,11 @@ public class fields {
 		By nextToPrpertyInfoFromPurchaserInfo = By.id("pt1:r1:0:b2");
 		By NextToWifeHusbandScn = By.id("pt1:r1:0:b2");
 		
+		By addMultiBuyers=By.xpath("//*[@id=\"pt1:r1:0:b5\"]/a/span"); // NEW
+		
+		
 		//----------------------------------------- Property Info------------------------------------
-		// معلومات العقار الاصلي في حالة سكن توسعة 
+		// معلومات العقار الاصلي في حالة سكن توسعة *NEW
 		By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
 		By Directorate=By.id("pt1:r1:3:soc5::content");
 		By village=By.id("pt1:r1:3:soc1::content");
@@ -170,6 +174,7 @@ public class fields {
 		// By SearchButton=By.id("pt1:r1:1:cb1"); // button البحث عن طريق رقم القيد
 		By checkowners = By.id("pt1:r1:1:pc2:t5:0:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
 		By checkOwners = By.id("pt1:r1:1:pc2:t5:1:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
+		By MultiPropertiesButton =By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span"); // new **
 		By NextToBuyerAttach = By.id("pt1:r1:1:b2");													// المالكين
 
 		// use next for التالي
@@ -181,7 +186,7 @@ public class fields {
 
 		//-----------------------Link Purchaser with Buyers---------------------
 		By buyerName = By.id("pt1:r1:3:soc2::content"); // اسم المشتري
-		By Properties2 = By.id("pt1:r1:3:soc1::content"); // العقارات
+		By Propertieslist = By.id("pt1:r1:3:soc1::content"); // العقارات
 		By ownerName = By.id("pt1:r1:3:soc3::content");// اسم المالك
 		By areatoBeOwnedNum = By.id("pt1:r1:3:it11::content"); // المساحة المراد تملكها رقما
 		By areatoBeOwned = By.id("pt1:r1:3:it1::content"); // المساحة المراد تملكها كتابة

@@ -6,7 +6,7 @@
       <class name="Package.APNO">
         <methods>
           <include name="Login"/>
-          <include name="Case4_0_0_0"/>
+          <include name="Case4000"/>
           <include name="End"/>
         </methods>
       </class> <!-- Package.APNO -->
