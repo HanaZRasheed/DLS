@@ -188,5 +188,22 @@ public class Fields {
 	// مراجعة الطلب
 	By submitRequest = By.id("pt1:r1:4:b1"); // تقديم طلب
 	By submitRequest2 = By.id("pt1:r1:5:b1"); // تقديم طلب
-
+//----------------------------------------- Property Info------------------------------------
+		// معلومات العقار الاصلي في حالة سكن توسعة *NEW
+		By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
+		By Directorate=By.id("pt1:r1:3:soc5::content");
+		By village=By.id("pt1:r1:3:soc1::content");
+		By BuildingNo=By.id("pt1:r1:3:it6::content");
+		By BasinNo=By.id("pt1:r1:3:it6::content");
+		By neighbourhoodNo=By.id("pt1:r1:3:soc3::content");
+		By apartmentNo=By.id("pt1:r1:3:it1::content");
+		By plateNo=By.id("pt1:r1:3:soc4::content");
+		By propertyType=By.id("pt1:r1:3:soc6::content");
+		By licenseNo=By.id("pt1:r1:3:it3::content");
+		By landNo=By.id("pt1:r1:3:it5::content");
+		By FloorNo =By.id("pt1:r1:3:it7::content");
+		By saveAddedOriginalProperty=By.id("pt1:r1:3:b1");
+		
+	
+	
 }
