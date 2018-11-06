@@ -1,13 +1,13 @@
-package Package;
+package dls;
 
-public class VARs extends fields{
+public class Vars extends Fields{
 	
 	//Drivers
 		String IEDriver = "C:\\Users\\hrasheed\\DLS\\APNO\\DLS-APNO\\driver\\IEDriverServer.exe";
-		String ChromeDriver = "C:\\Users\\hrasheed\\Downloads\\chromedriver.exe";
-		String gekoDriver="C:\\Users\\hrasheed\\DLS\\APNO\\DLS-APNO\\driver\\geckodriver.exe";
+		String ChromeDriver = "C:\\\\\\\\Users\\\\\\\\nftaiha\\\\\\\\git\\\\\\\\MoH\\\\\\\\MoH\\\\\\\\src\\\\\\\\MoH\\\\\\\\chromedriver.exe";
+		
 	//Link 	
-		String link="http://172.16.0.34:7003/dlseservices/faces/main_page";
+		String link="http://172.16.0.38:7003/dlseservices/faces/index";
 	
 		
 		// Log in credentials 
@@ -22,13 +22,12 @@ public class VARs extends fields{
 		String VendorAgent="وكيل بائع";
 		String realtyOffices ="مكاتب عقارية";
 		
-		
 		// PurposeOfPossession DDL options
 		String Residential="سكن";
 		String Agriculture="زراعة";
 		String industry="صناعة";
 		String FinanceLease="تأجير تمويلي";
-		String Commercial_Office="تجارية_مكاتب";
+		String Commercial_Office="تجارية_مكاتب"; //ادارة أعمال
 		String RepairnadDischargeDevelopment="اصلاح وافراز وتطوير";
 		
 		
@@ -37,6 +36,7 @@ public class VARs extends fields{
 		String OtherPurposes="اخرى";
 		String Residence="سكن";
 		String expansion="توسعه";
+		String BussinessAdministration = "مكتب لأدارة اعماله";
 		
 		//// SecondaryPurposeOfPossession DDL options - Agriculture
 		String plantationConstruction= "انشاء مشتل";
@@ -87,6 +87,9 @@ public class VARs extends fields{
 			String Australian="الأسترالية";
 			String Egyptian="المصرية";
 			String Jordanian="الأردنية";
+			String Syrian = "السورية";
+			String Israel = "الإسرائيلية";
+			String Palestine = "الفلسطينية";
 
 	// CountryCode DDL Options الرمز الدولي
 			String code1="00976";
@@ -113,11 +116,6 @@ public class VARs extends fields{
 		String widow="ارمل";
 		String married="متزوج";
 		String divorced="مطلق";
-		
- // معلومات العقار/العقارات المُراد شراؤها
-		String recordNoContent="1-6BAE1P";// البحث عن طريق رقم القيد
 
-		String SchemeNumberContent="1-6BAE1P";// الرقم المميز للمخطط
-
-		
 }
+
