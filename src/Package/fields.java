@@ -29,11 +29,12 @@ public class Fields {
 	By InstituteNationalNo = By.id("pt1:r1:1:it10::content");
 	By CoNationalNumber = By.id("pt1:r1:1:it10::content"); // الرقم الوطني للمنشأة
 	// وكيل مشتري and وكيل بائع fields
-	By judicialAgencyNo = By.id("pt1:r1:1:it7::content");
-	By judicialAgencyDate = By.id("pt1:r1:1:id2::content");
+	By judicialAgencyNo = By.id("pt1:r1:1:it7::content"); //وكيل مشتري
+	By judicialAgencyDate = By.id("pt1:r1:1:id2::content"); //*تاريخ الوكالة العدلية
 	By permitField1 = By.id("pt1:r1:1:it12::content");
 	By permitField2 = By.id("pt1:r1:1:it13::content");
 	By nextToPurchaseInfo = By.xpath("//*[@id=\"pt1:r1:1:b2\"]/a");
+	
     By AddOriginalProperty = By.id("pt1:r1:1:b5");
     By OtherPurpose = By.id("pt1:r1:1:it11::content");
 
@@ -73,7 +74,6 @@ public class Fields {
 	By buyerInfofield2 = By.id("pt1:r1:2:it2::content");
 	By buyerInfofield3 = By.id("pt1:r1:2:it3::content");
 	By buyerInfofield4 = By.id("pt1:r1:2:it4::content");
-
 	By nameasinPassport = By.id("pt1:r1:2:it5::content"); // الاسم حسب جواز السفر
 	By nationality = By.id("pt1:r1:2:soc2::content"); // الجنسيةغ
 	By Othernationality = By.id("pt1:r1:0:soc9::content"); //  جنسية أخرى
@@ -93,8 +93,8 @@ public class Fields {
 	By NoResidency = By.xpath("//*[@id=\"pt1:r1:2:sor4:_0\"]");
 	By YesResidency = By.id("pt1:r1:0:sor4:_1");
 	By YesResidency2 = By.id("pt1:r1:2:sor4");	
-	By ResidencyNo = By.id("pt1:r1:0:it23::content"); // رقم الاقامة
-	By ResidencyDate = By.id("pt1:r1:0:id6::content"); // تاريخ الاقامة
+	By ResidencyNo = By.id("pt1:r1:2:it23::content"); // رقم الاقامة
+	By ResidencyDate = By.id("pt1:r1:2:id6::content"); // تاريخ الاقامة
 
 	// هل لديك عقارات داخل المملكة؟
 	By noProperty = By.id("pt1:r1:2:sor2:_0");
@@ -188,22 +188,22 @@ public class Fields {
 	// مراجعة الطلب
 	By submitRequest = By.id("pt1:r1:4:b1"); // تقديم طلب
 	By submitRequest2 = By.id("pt1:r1:5:b1"); // تقديم طلب
-//----------------------------------------- Property Info------------------------------------
-		// معلومات العقار الاصلي في حالة سكن توسعة *NEW
-		By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
-		By Directorate=By.id("pt1:r1:3:soc5::content");
-		By village=By.id("pt1:r1:3:soc1::content");
-		By BuildingNo=By.id("pt1:r1:3:it6::content");
-		By BasinNo=By.id("pt1:r1:3:it6::content");
-		By neighbourhoodNo=By.id("pt1:r1:3:soc3::content");
-		By apartmentNo=By.id("pt1:r1:3:it1::content");
-		By plateNo=By.id("pt1:r1:3:soc4::content");
-		By propertyType=By.id("pt1:r1:3:soc6::content");
-		By licenseNo=By.id("pt1:r1:3:it3::content");
-		By landNo=By.id("pt1:r1:3:it5::content");
-		By FloorNo =By.id("pt1:r1:3:it7::content");
-		By saveAddedOriginalProperty=By.id("pt1:r1:3:b1");
+	//----------------------------------------- Property Info------------------------------------
+			// معلومات العقار الاصلي في حالة سكن توسعة *NEW
+			By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
+			By Directorate=By.id("pt1:r1:3:soc5::content");
+			By village=By.id("pt1:r1:3:soc1::content");
+			By BuildingNo=By.id("pt1:r1:3:it6::content");
+			By BasinNo=By.id("pt1:r1:3:it6::content");
+			By neighbourhoodNo=By.id("pt1:r1:3:soc3::content");
+			By apartmentNo=By.id("pt1:r1:3:it1::content");
+			By plateNo=By.id("pt1:r1:3:soc4::content");
+			By propertyType=By.id("pt1:r1:3:soc6::content");
+			By licenseNo=By.id("pt1:r1:3:it3::content");
+			By landNo=By.id("pt1:r1:3:it5::content");
+			By FloorNo =By.id("pt1:r1:3:it7::content");
+			By saveAddedOriginalProperty=By.id("pt1:r1:3:b1");
+			
 		
-	
-	
+		
 }
