@@ -9,9 +9,11 @@ public class VARs extends fields{
 		String ChromeDriver = "C:\\Users\\hrasheed\\Downloads\\chromedriver.exe";
 		String gekoDriver="C:\\Users\\hrasheed\\DLS\\APNO\\DLS-APNO\\driver\\geckodriver.exe";
 	//Link 	
-		String link="http://172.16.0.34:7003/dlseservices/faces/main_page";
+	//	String link="http://172.16.0.34:7003/dlseservices/faces/main_page"; // development 
+		String link="http://172.16.0.38:7003/dlseservices/faces/index ";// Local
 	
-		
+		// Upload From
+		String FiletobeUploaded="C:\\Users\\hrasheed\\Documents\\FileUploadFirfox.exe";
 		// Log in credentials 
 		String usernameContent="Omran_Rabieh";
 		String passwordContent="Oo@123";
@@ -23,6 +25,10 @@ public class VARs extends fields{
 		String BuyerAgent="وكيل مشتري";
 		String VendorAgent="وكيل بائع";
 		String realtyOffices ="مكاتب عقارية";
+		
+		// fields content for realtyOffices
+	 String	permitField1Content="1335687"; // New **
+	 String permitField2Content="1335687"; // New **
 		
 		
 		// PurposeOfPossession DDL options
@@ -129,10 +135,54 @@ public class VARs extends fields{
 		String spouseMomThirdNameContent="ع";
 		String spouseMomlastNameContent="ر";
 		
- // معلومات العقار/العقارات المُراد شراؤها
-		String recordNoContent="1-6BAE1P";// البحث عن طريق رقم القيد
-
-		String SchemeNumberContent="1-6BAE1P";// الرقم المميز للمخطط
-
 		
+		//--------------------------------------------- Second Buyer Info---------------------------
+		String buyer2Infofield1Content="دياله";
+		String buyer2Infofield2Content="امين";
+		String buyer2Infofield3Content="ابراهيم ";
+		String buyer2Infofield4Content="الحسيني";
+		
+		String nameasinPassportContent2="دياله امين ابراهيم الحسيني";// Name as in passport
+		String phoneNoContent2="0797078728"; // رقم الهاتف
+		String passportNumberContent2="999555"; // رقم جواز السفر
+		String productionDateContent2="2017/10/12"; // تاريخ الاصدار
+		String ExpiryDateContent2="2018/10/11"; // تاريخ الانتهاء
+		String productionLocationContent2="Amman"; // مكان الاصدار
+		String placeOfBirthContent2="Amman"; // مكان الولادة
+		String dateOfBirthContent2="1995/8/13"; // تاريخ الولادة
+		String currentResidenceAddressContent2="Amman "; // مكان الاقامة الحالي
+		String JobContent2="مبرمج"; //  المهنة
+		String registrationNoContent2="123"; // رقم الدخول
+		String additionalInfoContent2="Hana zaid abdlekareem alrasheed"; // معلومات اضافية 
+		
+		//  معلومات الام
+		String MomFirstNameContent2="ز";
+		String MomSecondNameContent2="ز";
+		String MomThirdNameContent2="ٍز";
+		String MomLastNameContent2="ز";
+		
+ // معلومات العقار/العقارات المُراد شراؤها
+		String recordNoContentCase4000="1234564";//    امانة عمان الكبرى- البحث عن طريق رقم القيد
+		String SchemeNumberContentCase4000="1234564";// امانة عمان الكبرى- الرقم المميز للمخطط
+		
+		String recordNoContentCase4100="1234563";//   or 1234562     البحث عن طريق رقم القيد- الجهة التنظيمية وزارة البلديات أو هيئة تشجيع الاستثمار
+		String SchemeNumberContentCase4100="1234563";//   البحث عن طريق رقم المميز للمخطط-  الرقم المميز للمخطط
+		
+		String recordNoContentCase4200="1234561";// البحث عن طريق رقم القيد- الجهة التنظيمية سلطة وادي الاردن
+		String SchemeNumberContentCase4200="1234561";// البحث عن طريق رقم المميز للمخطط-  الجهة التنظيمية سلطة وادي الاردن
+		
+		String recordNoContentCase4300="1234560";//  البحث عن طريق رقم القيد- سلطة اقليم العقبة
+		String SchemeNumberContentCase4300="1234560";// البحث عن طريق رقم مميز للمخطط-  سلطة اقليم العقبة
+		
+		String recordNoContentCase4400="1234563";// البحث عن طريق رقم القيد -  سلطة اقليم البتراء
+		String SchemeNumberContentCase4400="1234563";// البحث عن طريق رقم مميز للمخطط- سلطة اقليم البتراء
+		
+		// اكثر من عقار و كل عقار تابع لجهة تنظيمية 
+		String recordNoContentCase4500A="1234564";// البحث عن طريق رقم القيد
+		String SchemeNumberContentCase4500A="1234564"; // الرقم المميز للمخطط
+		String recordNoContentCase4500B="1234563";// البحث عن طريق رقم القيد
+		String SchemeNumberContentCase4500B="1234563"; // الرقم المميز للمخطط
+		
+		
+		String recordNoContent="1-6BAE1P";
 }

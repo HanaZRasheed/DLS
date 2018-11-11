@@ -30,8 +30,8 @@ public class fields {
 		By InstituteNationalNo = By.id("pt1:r1:1:it10::content");
 		By CoNationalNumber = By.id("pt1:r1:1:it10::content"); // الرقم الوطني للمنشأة
 		// وكيل مشتري and وكيل بائع fields
-		By judicialAgencyNo = By.id("pt1:r1:1:it7::content");
-		By judicialAgencyDate = By.id("pt1:r1:1:id2::content");
+		By judicialAgencyNo = By.id("pt1:r1:1:it7::content"); //   رقم الوكالة عدلية
+		By judicialAgencyDate = By.id("pt1:r1:1:id2::content"); // 
 		By permitField1 = By.id("pt1:r1:1:it12::content");
 		By permitField2 = By.id("pt1:r1:1:it13::content");
 		By nextToPurchaseInfo = By.xpath("//*[@id=\"pt1:r1:1:b2\"]/a");
@@ -41,7 +41,7 @@ public class fields {
 		// Attachments on Applicant Info Screen
 		By AuthorizationLetter = By.xpath("");// كتاب تفويض
 		By PowerofAttorney = By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// صورة وكالة عدلية
-
+        
 		// Attachments on Purchaser info screen
 		By IDCard = By.className("x22j"); // هوية أحوال مدنية
 		By Passport = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
@@ -50,16 +50,17 @@ public class fields {
 		By Others = By.xpath("");
 
 		// Attachments on Property Info screen
-		By OrganizationalChart = By.xpath("//*[@id=\\\"pt1:r1:1:pc1:t2:2:pgl50\\\"]/tbody/tr/td[3]/span");// مخطط موقع تنظيمي
+		By OrganizationalChart = By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[8]/table/tbody/tr/td/div/div[11]/div/div[1]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[3]/label/table/tbody/tr/td[3]/span");// مخطط موقع تنظيمي
+
 		By CoRegistrationCertificate = By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:3:pgl50\"]/tbody/tr/td[3]/span");// شهادة تسجيل الشركة
 		By ProfessionLicense = By.xpath("//*[@id=\\\"pt1:r1:1:pc1:t2:3:pgl50\\\"]/tbody/tr/td[3]/span");// رخصة المهن
-		By RegistrationPolicy=By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // سند تسجيل
-		By Lamane3 = By.xpath("");// كتاب لا مانع
+		By Lamane3 = By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[8]/table/tbody/tr/td/div/div[11]/div/div[1]/div/div/div[2]/div/div[2]/table/tbody/tr[4]/td[3]/label/table/tbody/tr/td[3]/span");// كتاب لا مانع
 		By Others2 = By.xpath("");
-		
+		By mo5tetalaradi=By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[8]/table/tbody/tr/td/div/div[11]/div/div[1]/div/div/div[2]/div/div[2]/table/tbody/tr[2]/td[3]/label/table/tbody/tr/td[3]/span");
 		// Attachments on Buyers attachments section
 		By IDCardBuyer = By.className("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // هوية أحوال مدنية
-		By FormalLetter = By.className(""); // كتاب رسمي
+		By FormalLetter = By.className("x22j"); // كتاب رسمي
+		
 		By CoCommercialRecord = By.xpath("");// سجل تجاري للشركة
 		By PassportBuyer = By.xpath("");// جواز السفر
 
@@ -123,6 +124,67 @@ public class fields {
 		By addMultiBuyers=By.xpath("//*[@id=\"pt1:r1:0:b5\"]/a/span"); // NEW
 		
 		
+		// -------------------------------------Second Buyer Info-----------------------------
+		By buyer2Infofield1 = By.id("pt1:r1:0:it1::content");
+		By buyer2Infofield2 = By.id("pt1:r1:0:it2::content");
+		By buyer2Infofield3 = By.id("pt1:r1:0:it3::content");
+		By buyer2Infofield4 = By.id("pt1:r1:0:it4::content");
+
+		By nameasinPassport2 = By.id("pt1:r1:0:it5::content"); // الاسم حسب جواز السفر
+		By nationality2 = By.id("pt1:r1:0:soc2::content"); // الجنسية
+		By phoneNumber2 = By.id("pt1:r1:0:it28::content"); // الهاتف
+		By CountryCode2 = By.id("pt1:r1:0:soc7::content"); // الرمز الدولي
+		By passportType2 = By.id("pt1:r1:0:soc8::content"); // نوع جواز السفر
+		By passportNumber2 = By.id("pt1:r1:0:it20::content"); // رقم جواز السفر
+		By productionDate2 = By.id("pt1:r1:0:id1::content"); // تاريخ الإصدار
+		By ExpiryDate2 = By.id("pt1:r1:0:id5::content"); // تاريخ الانتهاء
+		By productionLocation2 = By.id("pt1:r1:0:it21::content"); // مكان الإصدار
+		By arrivalCountry2 = By.id("pt1:r1:0:soc1::content"); // بلد القدوم
+		By placeOfBirth2 = By.id("pt1:r1:0:it32::content"); // مكان الولادة
+
+		By birthDate2 = By.id("pt1:r1:0:id3::content");// تاريخ الولادة
+		// لديك إقامة بالمملكة
+		By NoResidency2 = By.id("pt1:r1:0:sor4:_0");
+		By YesResidency2 = By.id("pt1:r1:0:sor4:_1");
+
+		By ResidencyNo2 = By.id("pt1:r1:0:it23::content"); // رقم الاقامة
+		By ResidencyDate2 = By.id("pt1:r1:0:id6::content"); // تاريخ الاقامة
+
+		// هل لديك عقارات داخل المملكة؟
+		By noProperty2 = By.id("pt1:r1:2:sor2:_0");
+		By yesProperty2 = By.id("pt1:r1:0:sor2:_1");
+
+		By currentResidenceAddress2 = By.id("pt1:r1:0:it6::content");// عنوان الإقامة الحالية
+		By Gender2 = By.id("pt1:r1:0:soc12::content"); // الجنس
+		By socialStatus2 = By.id("pt1:r1:0:soc6::content"); // الحالة الاجتماعية
+		By job2 = By.id("pt1:r1:0:it13::content");// المهنة
+		By registrationNo2 = By.id("pt1:r1:0:it7::content"); // رقم الدخول
+		By additionalInfo2 = By.id("pt1:r1:0:it24::content"); // معلومات اضافية
+
+		// Radio Button جنسية أخرى
+		By noOtherNationality2 = By.id("pt1:r1:0:sor1:_0");
+		By yesOtherNationality2 = By.id("pt1:r1:0:sor1:_1");
+
+		By AnotherNationality2 = By.id("pt1:r1:0:soc9::content"); // fields of الجنسية الاخرى
+		By motherNationality2= By.id("pt1:r1:0:soc4::content"); // جنسية الأم
+
+		// هل المستدعى له داخل المملكة؟
+		By outsideKindom2 = By.id("pt1:r1:0:sor5:_0"); // لا
+		By insideKigdom2 = By.id("pt1:r1:0:sor5:_1"); // نعم
+
+		// معلومات الام
+		By MomFirstName2 = By.id("pt1:r1:0:it36::content");
+		By MomSecondName2 = By.id("pt1:r1:0:it37::content");
+		By MomThirdName2 = By.id("pt1:r1:0:it38::content");
+		By MomLastName2 = By.id("pt1:r1:0:it39::content");
+		By nextToPrpertyInfoFromPurchaserInfo2 = By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[1]/div[14]/table/tbody/tr/td[4]/div/a/span");
+		By NextToWifeHusbandScn2 = By.id("pt1:r1:0:b2");
+		
+		
+		
+		
+		
+		
 		//----------------------------------------- Property Info------------------------------------
 		// معلومات العقار الاصلي في حالة سكن توسعة *NEW
 		By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
@@ -143,13 +205,13 @@ public class fields {
 	
 		// -------------------------------------------------WifeHusband Info-----------------------
 		//
-		By AddButton = By.xpath("//*[@id=\"pt1:r1:0:b5\"]/a");
+		By AddButton = By.xpath("//*[@id=\"pt1:r1:0:b5\"]/a"); 
 		// معلومات الزوجة / الزوج
 		By BuyerName = By.id("pt1:r1:2:soc4::content");
-		By addButton = By.xpath("//*[@id=\"pt1:r1:2:b5\"]/a");
+		
+		By addSpouseInfoButton = By.id("pt1:r1:1:b5");  
 		By deleteButton = By.xpath("//*[@id=\"pt1:r1:2:b4\"]/a");
 		By NextToPropertyScnfromWifeSCN = By.id("pt1:r1:1:b2");
-		
 		By spousefirstName=By.id("pt1:r1:1:it3::content");
 		By spouseSecondName=By.id("pt1:r1:1:it4::content");
 		By spouseThirdName=By.id("pt1:r1:1:it5::content");
@@ -160,42 +222,68 @@ public class fields {
 		By spouseMomThirdName=By.id("pt1:r1:1:it11::content");
 		By spouseMomFourthName=By.id("pt1:r1:1:it13::content");
 		By spouseMomNationality=By.id("pt1:r1:1:soc3::content");
-		
-		
-
 		// ----------------------------------------Property Info-----------------------------------
 		// معلومات العقار/العقارات المُراد شراؤها
 
-		By recordNo = By.id("pt1:r1:1:it25::content"); // رقم القيد
+		By recordNo2 = By.id("pt1:r1:2:it25::content"); // رقم القيد بعد صفحة معلومات الزوج
+		By recordNo = By.id("pt1:r1:1:it25::content");  // رقم القيد
 		By DLSKeyButton = By.id("pt1:r1:1:cb1");
+		By DLSKeyButton2=By.id("pt1:r1:2:cb1");
+		By schemeNo2=By.id("pt1:r1:2:it1::content");
 		By schemeNo = By.id("pt1:r1:1:it1::content"); // الرقم المميز للمخطط
 		By addPropertyButton = By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span");
 		By OwnersCheckbox = By.xpath("pt1:r1:1:pc2:t5:0:sbc2::content");
 		// By SearchButton=By.id("pt1:r1:1:cb1"); // button البحث عن طريق رقم القيد
-		By checkowners = By.id("pt1:r1:1:pc2:t5:0:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
-		By checkOwners = By.id("pt1:r1:1:pc2:t5:1:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
-		By MultiPropertiesButton =By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span"); // new **
+		By checkownersA = By.id("pt1:r1:1:pc2:t5:0:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
+		By checkownersB = By.id("pt1:r1:1:pc2:t5:1:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
+		By checkownersA1=By.id("pt1:r1:2:pc2:t5:0:sbc2::content"); 
+		By checkownersA2= By.id("pt1:r1:2:pc2:t5:1:sbc2::content");
+	    By NonJordanianOwner=By.id("pt1:r1:1:pc2:t5:7:sbc2::content");
 		By NextToBuyerAttach = By.id("pt1:r1:1:b2");													// المالكين
+	    By NextToBuyerAttach2 = By.id("pt1:r1:2:b2");
+	 
+		// use next for التالي
+		
+		
+		 
+		
 
 		// use next for التالي
 		// --------------------------------------------------Buyers Info---------------------------
 		// مرفقات البائعين
-		By Properties = By.id("pt1:r1:2:soc1::content"); // العقارات
+	    By Properties = By.id("pt1:r1:2:soc1::content"); // العقارات
 		By Owners = By.id("pt1:r1:2:soc2::content"); // المالكين
 		By NextToLinkPurchaserandBuyers = By.id("pt1:r1:2:b466666666"); //  التالي
+	    By NextToLinkPurchaserandBuyes2 =By.id("pt1:r1:3:b466666666");
+	    By Properties2=By.id("pt1:r1:3:soc1::content");
+	    By Owners2=By.id("pt1:r1:3:soc2::content");
+		
 
 		//-----------------------Link Purchaser with Buyers---------------------
-		By buyerName = By.id("pt1:r1:3:soc2::content"); // اسم المشتري
-		By Propertieslist = By.id("pt1:r1:3:soc1::content"); // العقارات
-		By ownerName = By.id("pt1:r1:3:soc3::content");// اسم المالك
-		By areatoBeOwnedNum = By.id("pt1:r1:3:it11::content"); // المساحة المراد تملكها رقما
-		By areatoBeOwned = By.id("pt1:r1:3:it1::content"); // المساحة المراد تملكها كتابة
-		By numberofProportions = By.id("pt1:r1:3:it9::content"); // الحصص المراد تملكها رقما
-		By NextToReviewSection = By.id("pt1:r1:3:b12"); // التالي
-
+	    By buyerName = By.id("pt1:r1:3:soc2::content"); // اسم المشتري
+	    By buyerName2 = By.id("pt1:r1:4:soc2::content"); // اسم المشتري
+	    By PropertiesA2 = By.id("pt1:r1:3:soc1::content"); // العقارات
+	    By PropertiesB2 = By.id("pt1:r1:4:soc1::content"); // العقارات
+	    By ownerName = By.id("pt1:r1:3:soc3::content");// اسم المالك
+	    By ownerName2 = By.id("pt1:r1:4:soc3::content");// اسم المالك
+	    By areatoBeOwnedNum = By.id("pt1:r1:3:it11::content"); // المساحة المراد تملكها رقما
+	    By areatoBeOwnedNum2 = By.id("pt1:r1:4:it11::content"); // المساحة المراد تملكها رقما
+	    By areatoBeOwned = By.id("pt1:r1:3:it1::content"); // المساحة المراد تملكها كتابة
+	    By areatoBeOwned2 = By.id("pt1:r1:4:it1::content"); // المساحة المراد تملكها كتابة
+	    By numberofProportions = By.id("pt1:r1:3:it9::content"); // الحصص المراد تملكها رقما
+	    By numberofProportions2 = By.id("pt1:r1:4:it9::content"); // الحصص المراد تملكها رقما
+	    By NextToReviewSection = By.id("pt1:r1:3:b12"); // التالي
+	    By NextToReviewSection2 = By.id("pt1:r1:4:b12"); // التالي
+	    By addLinkPurchaserWithBuyer=By.id("pt1:r1:3:b2");
 		//--------------------------------------------Review ------------------------------------------
 		// مراجعة الطلب
-		By submitRequest = By.id("pt1:r1:4:b1"); // تقديم طلب
-
+		By submitRequest = By.id("pt1:r1:4:b1"); // تقديم طلب 
+		By submitRequest2 = By.id("pt1:r1:5:b1"); // تقديم طلب
+		By agreeButton=By.xpath("/html/body/div[1]/form/div[3]/div[2]/div[1]/table/tbody/"
+				+ "tr/td/div/div/table/tbody/tr[3]/td[2]/table/tbody/tr/td[1]/div/a"); // اوافق 
+		// Epayment
+		By EpaymentLink=By.xpath("/html/body/div[1]/form/div[1]/div[2]/table/tbody/tr/td[2]/div/span/table/tbody/tr/td/div/div[2]/div[3]/span/div[3]/div[9]/div/div[1]/div[1]/table/tbody/tr/td[1]/div/a/span");
+		By feesDetails=By.id("pt1:r1:5:pc1:t4:0:l3::text");
+		
 	}
 
