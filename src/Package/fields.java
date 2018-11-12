@@ -147,46 +147,46 @@ public class Fields {
 	// معلومات العقار/العقارات المُراد شراؤها
 
 	By recordNo2 = By.id("pt1:r1:2:it25::content"); // رقم القيد بعد صفحة معلومات الزوج
-	By recordNo = By.id("pt1:r1:1:it25::content");  // رقم القيد
-	By DLSKeyButton = By.id("pt1:r1:1:cb1");
+	By recordNo = By.id("pt1:r1:3:it25::content");  // رقم القيد
+	By DLSKeyButton = By.id("pt1:r1:3:cb1");
 	By DLSKeyButton2=By.id("pt1:r1:2:cb1");
 	By schemeNo2=By.id("pt1:r1:2:it1::content");
-	By schemeNo = By.id("pt1:r1:1:it1::content"); // الرقم المميز للمخطط
-	By addPropertyButton = By.xpath("//*[@id=\"pt1:r1:1:b5\"]/a/span");
+	By schemeNo = By.id("pt1:r1:3:it1::content"); // الرقم المميز للمخطط
+	By addPropertyButton = By.xpath("//*[@id=\"pt1:r1:3:b5\"]/a/span");
 	By OwnersCheckbox = By.xpath("pt1:r1:1:pc2:t5:0:sbc2::content");
 	// By SearchButton=By.id("pt1:r1:1:cb1"); // button البحث عن طريق رقم القيد
 	By checkownersA = By.id("pt1:r1:1:pc2:t5:0:sbc2::content"); // الرجاء اختيار البائعين من قائمة المالكين
-	By checkownersB = By.id("pt1:r1:1:pc2:t5:1:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
+	By checkownersB = By.id("pt1:r1:1:pc2:t5:3:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
 	By checkownersA1=By.id("pt1:r1:2:pc2:t5:0:sbc2::content");
     By NonJordanianOwner=By.id("pt1:r1:1:pc2:t5:7:sbc2::content");
-	By NextToBuyerAttach = By.id("pt1:r1:1:b2");													// المالكين
+	By NextToBuyerAttach = By.id("pt1:r1:3:b2");													// المالكين
     By NextToBuyerAttach2 = By.id("pt1:r1:2:b2");
 	// use next for التالي
 	// --------------------------------------------------Buyers Info---------------------------
 	// مرفقات البائعين
 	By Properties = By.id("pt1:r1:2:soc1::content"); // العقارات
 	By Owners = By.id("pt1:r1:2:soc2::content"); // المالكين
-	By NextToLinkPurchaserandBuyers = By.id("pt1:r1:2:b466666666"); //  التالي
+	By NextToLinkPurchaserandBuyers = By.id("pt1:r1:4:b466666666"); //  التالي
     By NextToLinkPurchaserandBuyes2 =By.id("pt1:r1:3:b466666666");
 	//-----------------------Link Purchaser with Buyers---------------------
 	
-    By buyerName = By.id("pt1:r1:3:soc2::content"); // اسم المشتري
+    By buyerName = By.id("pt1:r1:5:soc2::content"); // اسم المشتري
     By buyerName2 = By.id("pt1:r1:4:soc2::content"); // اسم المشتري
-    By PropertiesA2 = By.id("pt1:r1:3:soc1::content"); // العقارات
+    By PropertiesA2 = By.id("pt1:r1:5:soc1::content"); // العقارات
     By PropertiesB2 = By.id("pt1:r1:4:soc1::content"); // العقارات
-    By ownerName = By.id("pt1:r1:3:soc3::content");// اسم المالك
+    By ownerName = By.id("pt1:r1:5:soc3::content");// اسم المالك
     By ownerName2 = By.id("pt1:r1:4:soc3::content");// اسم المالك
-    By areatoBeOwnedNum = By.id("pt1:r1:3:it11::content"); // المساحة المراد تملكها رقما
+    By areatoBeOwnedNum = By.id("pt1:r1:5:it11::content"); // المساحة المراد تملكها رقما
     By areatoBeOwnedNum2 = By.id("pt1:r1:4:it11::content"); // المساحة المراد تملكها رقما
-    By areatoBeOwned = By.id("pt1:r1:3:it1::content"); // المساحة المراد تملكها كتابة
+    By areatoBeOwned = By.id("pt1:r1:5:it1::content"); // المساحة المراد تملكها كتابة
     By areatoBeOwned2 = By.id("pt1:r1:4:it1::content"); // المساحة المراد تملكها كتابة
-    By numberofProportions = By.id("pt1:r1:3:it9::content"); // الحصص المراد تملكها رقما
+    By numberofProportions = By.id("pt1:r1:5:it9::content"); // الحصص المراد تملكها رقما
     By numberofProportions2 = By.id("pt1:r1:4:it9::content"); // الحصص المراد تملكها رقما
-    By NextToReviewSection = By.id("pt1:r1:3:b12"); // التالي
+    By NextToReviewSection = By.id("pt1:r1:5:b12"); // التالي
     By NextToReviewSection2 = By.id("pt1:r1:4:b12"); // التالي
 	//--------------------------------------------Review ------------------------------------------
 	// مراجعة الطلب
-	By submitRequest = By.id("pt1:r1:4:b1"); // تقديم طلب
+	By submitRequest = By.id("pt1:r1:6:b1"); // تقديم طلب
 	By submitRequest2 = By.id("pt1:r1:5:b1"); // تقديم طلب
 	//----------------------------------------- Property Info------------------------------------
 			// معلومات العقار الاصلي في حالة سكن توسعة *NEW
