@@ -92,7 +92,7 @@ public class APNO extends Vars {
 		Purpose2.selectByVisibleText(BussinessAdministration);
 		// رقم وطني للمنشأة
 		driver.findElement(CoNationalNumber).sendKeys("987445215");
-		//navigaeout
+		//navigaete out
 				driver.findElement(By.id("pt1:r1:1:s1")).click();
 		// Next to Purchaser info
 		Thread.sleep(Const);
@@ -219,15 +219,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 	   //--------------------------Link Purchaser with Buyer----------------
-		Thread.sleep(Const * 30);
+		Thread.sleep(Const * 40);
 		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		BuyerName.selectByValue("0");
 		Thread.sleep(Const);
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
-		Properties.selectByValue("1");
+		Properties.selectByValue("0");
 		Thread.sleep(Const);
 		Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
-		OwnerName.selectByValue("1");
+		OwnerName.selectByValue("0");
 		Thread.sleep(Const);
 		driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
 		Thread.sleep(Const);
@@ -707,13 +707,6 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 		driver.findElement(AddOriginalProperty).click();
        //----------------------Original property -------------------
-		
-		
-		
-		
-		
-		
-		
 		//Back
 		driver.findElement(BackToApplicantInfo).click();
 
@@ -1032,17 +1025,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
 		Thread.sleep(Const);
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
 		Thread.sleep(Const);
-		driver.findElement(OwnersCheckbox).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();
 		
 		// ------------------------Property InfoAttachments--------------------
 
-		driver.findElement(Others2).click();
+		//driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 20);
-		driver.findElement(CoRegistrationCertificate).click();
+		//driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 10);
@@ -1052,7 +1045,7 @@ public class APNO extends Vars {
 
 		//-------------------------Buyer's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		//driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 50);
@@ -1223,24 +1216,26 @@ public class APNO extends Vars {
 
 		// ---------------------Property & Buyer Info ------------------------------
 		Thread.sleep(Const * 10);
-
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
 		Thread.sleep(Const * 10);
 		driver.findElement(DLSKeyButton).click();
 		Thread.sleep(Const * 10);
 		driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
 		Thread.sleep(Const);
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
 		Thread.sleep(Const);
-		driver.findElement(OwnersCheckbox).click();
+		//driver.findElement(OwnersCheckbox).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();
+		
 		
 		// ------------------------Property InfoAttachments--------------------
 
-		driver.findElement(Others2).click();
+		//driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
-		Thread.sleep(Const * 20);
-		driver.findElement(CoRegistrationCertificate).click();
+		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Thread.sleep(Const * 20);
+		//driver.findElement(CoRegistrationCertificate).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 10);
@@ -1250,7 +1245,8 @@ public class APNO extends Vars {
 
 		//-------------------------Buyer's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		//driver.findElement(IDCardBuyer).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 50);
@@ -1260,24 +1256,22 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 30);
 
 		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
-		Thread.sleep(Const);
-		
+		BuyerName.selectByValue("0");
+		Thread.sleep(Const);		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
-		Properties.selectByValue("1");
+		Properties.selectByValue("0");
 		Thread.sleep(Const);
-
 		Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
-		OwnerName.selectByValue("1");
-		Thread.sleep(Const);
-		
+		OwnerName.selectByValue("0");
+		Thread.sleep(Const);		
 		driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
-		Thread.sleep(Const);
-		
+		Thread.sleep(Const);	
 		driver.findElement(areatoBeOwned).sendKeys("40"); //المساحة المراد تملكها كتابة
 		Thread.sleep(Const);
-		
 		driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
+		Thread.sleep(Const*20);
+		//navigate out
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:5:ssjj\"]/div[5]")).click();
 		Thread.sleep(Const*20);
 		driver.findElement(NextToReviewSection).click();
 		Thread.sleep(Const*20);
