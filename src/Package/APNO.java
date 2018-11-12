@@ -199,21 +199,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
 		Thread.sleep(Const);
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
 		Thread.sleep(Const);
-		driver.findElement(OwnersCheckbox).click();		
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();		
 		// ------------------------Property InfoAttachments--------------------
 		Thread.sleep(Const * 20);
-	driver.findElement(CoRegistrationCertificate).click();
+//	driver.findElement(CoRegistrationCertificate).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 	Thread.sleep(Const * 20);
 	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
-		Thread.sleep(Const * 10);
-		
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(NextToBuyerAttach).click();
 		//-------------------------Buyer's Attachments----------------------
-		driver.findElement(IDCardBuyer).click();
+		//driver.findElement(IDCardBuyer).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 50);
