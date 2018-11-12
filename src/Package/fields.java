@@ -63,10 +63,10 @@ public class Fields {
 	
 	// Attachments on Buyers attachments section 
 	By IDCardBuyer2 =By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");
-	By IDCardBuyer = By.className("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // هوية أحوال مدنية
-	By FormalLetter = By.className(""); // كتاب رسمي
-	By CoCommercialRecord = By.xpath("");// سجل تجاري للشركة
-	By PassportBuyer = By.xpath("");// جواز السفر
+	By IDCardBuyer = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // هوية أحوال مدنية
+	By FormalLetter = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // كتاب رسمي
+	By CoCommercialRecord = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// سجل تجاري للشركة
+	By PassportBuyer = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز السفر
 
 	//------------------------------------------------Purchaser Info ----------------------
 	// معلومات المشتري 4 حقول
@@ -76,7 +76,7 @@ public class Fields {
 	By buyerInfofield4 = By.id("pt1:r1:2:it4::content");
 	By nameasinPassport = By.id("pt1:r1:2:it5::content"); // الاسم حسب جواز السفر
 	By nationality = By.id("pt1:r1:2:soc2::content"); // الجنسيةغ
-	By Othernationality = By.id("pt1:r1:0:soc9::content"); //  جنسية أخرى
+	By Othernationality = By.id("pt1:r1:2:soc9::content"); //  جنسية أخرى
 
 	By phoneNumber = By.id("pt1:r1:2:it28::content"); // الهاتف
 	By CountryCode = By.id("pt1:r1:2:soc7::content"); // الرمز الدولي
@@ -112,19 +112,19 @@ public class Fields {
 	By yesOtherNationality = By.id("pt1:r1:2:sor1:_1");
 
 	By AnotherNationality = By.id("pt1:r1:0:soc9::content"); // fields of الجنسية الاخرى
-	By motherNationality = By.id("pt1:r1:0:soc4::content"); // جنسية الأم
+	By motherNationality = By.id("pt1:r1:2:soc4::content"); // جنسية الأم
 
 	// هل المستدعى له داخل المملكة؟
-	By outsideKindom = By.id("pt1:r1:0:sor5:_0"); // لا
-	By insideKigdom = By.id("pt1:r1:0:sor5:_1"); // نعم
+	By outsideKindom = By.id("pt1:r1:2:sor5:_0"); // لا
+	By insideKigdom = By.id("pt1:r1:2:sor5:_1"); // نعم
 
 	// معلومات الام
-	By MomFirstName = By.id("pt1:r1:0:it36::content");
-	By MomSecondName = By.id("pt1:r1:0:it37::content");
-	By MomThirdName = By.id("pt1:r1:0:it38::content");
-	By MomLastName = By.id("pt1:r1:0:it39::content");
-	By nextToPrpertyInfoFromPurchaserInfo = By.id("pt1:r1:0:b2");
-	By NextToWifeHusbandScn = By.id("pt1:r1:0:b2");
+	By MomFirstName = By.id("pt1:r1:2:it36::content");
+	By MomSecondName = By.id("pt1:r1:2:it37::content");
+	By MomThirdName = By.id("pt1:r1:2:it38::content");
+	By MomLastName = By.id("pt1:r1:2:it39::content");
+	By nextToPrpertyInfoFromPurchaserInfo = By.id("pt1:r1:2:b2");
+	By NextToWifeHusbandScn = By.id("pt1:r1:2:b2");
 
 	// -------------------------------------------------WifeHusband Info-----------------------
 	//
