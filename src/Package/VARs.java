@@ -37,7 +37,6 @@ public class Vars extends Fields{
 		String Residence="سكن";
 		String expansion="توسعه";
 		String BussinessAdministration = "مكتب لأدارة اعماله";
-		
 		//// SecondaryPurposeOfPossession DDL options - Agriculture
 		String plantationConstruction= "انشاء مشتل";
 		String AgriculturePurpose="الزراعة";
@@ -90,6 +89,7 @@ public class Vars extends Fields{
 			String Syrian = "السورية";
 			String Israel = "الإسرائيلية";
 			String Palestine = "الفلسطينية";
+			String Turkish = "التركية";
 
 	// CountryCode DDL Options الرمز الدولي
 			String code1="00976";
