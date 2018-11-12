@@ -1235,9 +1235,9 @@ public class APNO extends Vars {
 		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		//Thread.sleep(Const * 20);
 		//driver.findElement(CoRegistrationCertificate).click();
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		
+		//Thread.sleep(Const * 20);
+		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1271,7 +1271,7 @@ public class APNO extends Vars {
 		driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
 		Thread.sleep(Const*20);
 		//navigate out
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:5:ssjj\"]/div[5]")).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:5:ssjj\"]/div[8]")).click();
 		Thread.sleep(Const*20);
 		driver.findElement(NextToReviewSection).click();
 		Thread.sleep(Const*20);
