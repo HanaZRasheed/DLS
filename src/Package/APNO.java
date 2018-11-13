@@ -177,17 +177,17 @@ public class APNO extends Vars {
 		   Thread.sleep(Const * 20);
 //		   driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -207,7 +207,7 @@ public class APNO extends Vars {
 //	driver.findElement(CoRegistrationCertificate).click();
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 	Thread.sleep(Const * 20);
-	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(NextToBuyerAttach).click();
@@ -215,7 +215,7 @@ public class APNO extends Vars {
 		//driver.findElement(IDCardBuyer).click();
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 	   //--------------------------Link Purchaser with Buyer----------------
@@ -356,7 +356,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(Passport).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 30);
 		driver.findElement(NextToWifeHusbandScn).click();
@@ -419,11 +419,11 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others2).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 20);
 //		driver.findElement(CoRegistrationCertificate).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 //
 //		Thread.sleep(Const * 10);
@@ -438,13 +438,13 @@ public class APNO extends Vars {
 
 //		driver.findElement(IDCardBuyer2).click();
 		Thread.sleep(Const * 20);
-	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
 		
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
 		driver.findElement(NextToLinkPurchaserandBuyes2).click();
 
@@ -593,19 +593,19 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 	Thread.sleep(Const * 10);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -627,11 +627,11 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others2).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 20);
 //		driver.findElement(CoRegistrationCertificate).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 		
 		Thread.sleep(Const * 20);
@@ -639,13 +639,13 @@ public class APNO extends Vars {
 
 //		driver.findElement(IDCardBuyer2).click();
 		Thread.sleep(Const * 20);
-	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
 		
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-	Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
 		Thread.sleep(Const * 10);
 		driver.findElement(NextToBuyerAttach).click();
@@ -654,7 +654,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -705,6 +705,7 @@ public class APNO extends Vars {
 		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
 		Purpose2.selectByVisibleText(expansion);
 		Thread.sleep(Const * 20);
+		//pt1:r1:1:b5
 		driver.findElement(AddOriginalProperty).click();
        //----------------------Original property -------------------
 		//Back
@@ -802,23 +803,23 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 			Thread.sleep(Const * 20);
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 
 //			driver.findElement(IDCardBuyer2).click();
 			Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 30);
 			
 			
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec("AttachPath");
 			Thread.sleep(Const * 30);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -840,11 +841,11 @@ public class APNO extends Vars {
 
 		driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 20);
 		driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -854,7 +855,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -998,20 +999,20 @@ public class APNO extends Vars {
 
 	//	driver.findElement(Others).click();
 	//	Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 //		driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 		   
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+			Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 10);
 			
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+			Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -1033,11 +1034,11 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 20);
 		//driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1047,7 +1048,7 @@ public class APNO extends Vars {
 
 		//driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -1086,7 +1087,6 @@ public class APNO extends Vars {
 	// لغايات أخرى
 	public void Case1500() throws InterruptedException, IOException {
 		// -----------------------------Applicant info-----------------------------
-
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
 		Thread.sleep(Const * 10);
@@ -1100,7 +1100,6 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 		//navigate out
 		driver.findElement(By.id("pt1:r1:1:s1")).click();
-
 		//fill purpose
 		driver.findElement(OtherPurpose).sendKeys("nn"); //غايات أخرى
 		//navigate out
@@ -1108,9 +1107,7 @@ public class APNO extends Vars {
 		// Next to Purchaser info
 		Thread.sleep(Const*20);
 		driver.findElement(nextToPurchaseInfo).click();
-
 		// ---------------------------Purchaser info------------------------------
-
 		// معلومات المشتري
 		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
 		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
@@ -1137,34 +1134,26 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
 		Thread.sleep(Const);
-
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-
 		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
-
 		driver.findElement(NoResidency).click(); // -لا - لديك إقامة بالمملكة
 		Thread.sleep(Const * 10);
 		driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
 		Thread.sleep(Const * 10);
-
 		driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
 		Thread.sleep(Const);
-
 		Select GenderDDL = new Select(driver.findElement(Gender)); // الجنس
 		GenderDDL.selectByVisibleText(female); // أنثى
 		Thread.sleep(Const * 10);
-
 		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
 		 SocialStatusDDL.selectByVisibleText(single); //أعزب
 		//SocialStatusDDL.selectByVisibleText(married); // متزوج
-
 		Thread.sleep(Const * 10);
-
 		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
 		Thread.sleep(Const * 10);
 
@@ -1197,19 +1186,19 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 //		driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+			Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 10);
 			
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+			Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -1232,12 +1221,12 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		//Thread.sleep(Const * 20);
 		//driver.findElement(CoRegistrationCertificate).click();
 		
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1248,7 +1237,7 @@ public class APNO extends Vars {
 		//driver.findElement(IDCardBuyer).click();
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -1394,21 +1383,21 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 //		driver.findElement(Passport).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
@@ -1429,11 +1418,11 @@ public class APNO extends Vars {
 
 		driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 20);
 		driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1443,7 +1432,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -1591,10 +1580,10 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1617,11 +1606,11 @@ public class APNO extends Vars {
 
 		driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 20);
 		driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1631,7 +1620,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -1780,10 +1769,10 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(SecurityCard).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1806,11 +1795,11 @@ public class APNO extends Vars {
 
 		driver.findElement(Others2).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 20);
 		driver.findElement(CoRegistrationCertificate).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1820,7 +1809,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -1960,10 +1949,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(ResidenceCard).click(); //البطاقة الأمنية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -1986,7 +1975,7 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others2).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		//Thread.sleep(Const * 20);
 	
 		Thread.sleep(Const * 10);
@@ -1996,7 +1985,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -2139,10 +2128,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(IDCard).click(); //هوية الاحوال الشخصية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -2165,7 +2154,7 @@ public class APNO extends Vars {
 
 		//driver.findElement(Others2).click();
 		//Thread.sleep(Const * 20);
-		//Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		//Runtime.getRuntime().exec(AttachPath);
 		//Thread.sleep(Const * 20);
 	
 		Thread.sleep(Const * 10);
@@ -2175,7 +2164,7 @@ public class APNO extends Vars {
 
 		driver.findElement(IDCardBuyer).click();
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
 		driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -2318,10 +2307,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //البطاقة الأمنية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -2436,10 +2425,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //البطاقة الأمنية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -2554,10 +2543,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //البطاقة الأمنية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
@@ -2676,10 +2665,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //البطاقة الأمنية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -2795,10 +2784,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -2822,7 +2811,7 @@ public class APNO extends Vars {
 				//-------------------------Buyer's Attachments---------------------
 				driver.findElement(PassportBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 			   //--------------------------Link Purchaser with Buyer----------------
@@ -2964,10 +2953,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -2989,7 +2978,7 @@ public class APNO extends Vars {
 
 //				driver.findElement(Others2).click();
 //				Thread.sleep(Const * 20);
-//				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//				Runtime.getRuntime().exec(AttachPath);
 //				Thread.sleep(Const * 20);
 				
 				Thread.sleep(Const * 10);
@@ -2998,7 +2987,7 @@ public class APNO extends Vars {
 
 				driver.findElement(PassportBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -3143,7 +3132,7 @@ public class APNO extends Vars {
 
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3164,7 +3153,7 @@ public class APNO extends Vars {
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 	}	
@@ -3172,7 +3161,6 @@ public class APNO extends Vars {
 	//    البائع شركة - مدة الحجز منتهية
 	public void Case3300() throws InterruptedException, IOException {
 		// -----------------------------Applicant info-----------------------------
-
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
 		Thread.sleep(Const * 10);
@@ -3186,7 +3174,6 @@ public class APNO extends Vars {
 		// Next to Purchaser info
 		Thread.sleep(Const);
 		driver.findElement(nextToPurchaseInfo).click();
-
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
 		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
@@ -3214,7 +3201,6 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
 		Thread.sleep(Const);
-
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
@@ -3263,7 +3249,7 @@ public class APNO extends Vars {
 		// ------------------------Purchaser InfoAttachments--------------------
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3281,13 +3267,13 @@ public class APNO extends Vars {
 				// ------------------------Property InfoAttachments--------------------
 				driver.findElement(OrganizationalChart).click(); //   مخطط موقع تنظيمي
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 10);
 				driver.findElement(NextToBuyerAttach).click();
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(CoCommercialRecord).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 			   //--------------------------Link Purchaser with Buyer----------------
@@ -3418,7 +3404,7 @@ public class APNO extends Vars {
 		// ------------------------Purchaser InfoAttachments--------------------
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3437,7 +3423,7 @@ public class APNO extends Vars {
 				// ------------------------Property InfoAttachments--------------------
 				driver.findElement(OrganizationalChart).click(); // مخطط موقع تنظيمي 
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 10);
 				driver.findElement(NextToBuyerAttach).click();
 				//-------------------------Buyer's Attachments----------------------
@@ -3574,10 +3560,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3598,7 +3584,7 @@ public class APNO extends Vars {
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -3701,7 +3687,7 @@ public class APNO extends Vars {
 		// ------------------------Purchaser InfoAttachments--------------------
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3724,7 +3710,7 @@ public class APNO extends Vars {
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(FormalLetter).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -3850,10 +3836,10 @@ public class APNO extends Vars {
 		// ------------------------Purchaser InfoAttachments--------------------
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -3870,14 +3856,14 @@ public class APNO extends Vars {
 				// ------------------------Property InfoAttachments--------------------
 				driver.findElement(OrganizationalChart).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				Thread.sleep(Const * 10);
 				driver.findElement(NextToBuyerAttach).click();
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(FormalLetter).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 			   //--------------------------Link Purchaser with Buyer----------------
@@ -4011,10 +3997,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -4034,23 +4020,23 @@ public class APNO extends Vars {
 
 //				driver.findElement(Others2).click();
 //				Thread.sleep(Const * 20);
-//				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//				Runtime.getRuntime().exec(AttachPath);
 //				Thread.sleep(Const * 20);
 				//--wrong Attachments
 			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			    Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);					
 				Thread.sleep(Const * 10);
 				driver.findElement(NextToBuyerAttach).click();
 				//-------------------------Buyer's Attachments----------------------
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -4173,10 +4159,10 @@ public class APNO extends Vars {
 		// ------------------------Purchaser InfoAttachments--------------------
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -4197,18 +4183,18 @@ public class APNO extends Vars {
 
 //				driver.findElement(Others2).click();
 //				Thread.sleep(Const * 20);
-//				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//				Runtime.getRuntime().exec(AttachPath);
 //				Thread.sleep(Const * 20);
 				
 				//--wrong Attachments
 			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			    Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				
 				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
@@ -4218,7 +4204,7 @@ public class APNO extends Vars {
 
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -4348,7 +4334,7 @@ public class APNO extends Vars {
 
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
@@ -4405,7 +4391,7 @@ public class APNO extends Vars {
 		
 		driver.findElement(PowerofAttorney).click(); // صورة الوكالة العدلية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(nextToPurchaseInfo).click();
 
 		// ---------------------------Purchaser info------------------------------
@@ -4490,10 +4476,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 	
@@ -4517,18 +4503,18 @@ public class APNO extends Vars {
 
 //				driver.findElement(Others2).click();
 //				Thread.sleep(Const * 20);
-//				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//				Runtime.getRuntime().exec(AttachPath);
 //				Thread.sleep(Const * 20);
 				
 				//--wrong Attachments
 			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			    Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				
 				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
@@ -4538,7 +4524,7 @@ public class APNO extends Vars {
 
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
@@ -4595,7 +4581,7 @@ public class APNO extends Vars {
 		
 		driver.findElement(PowerofAttorney).click(); // صورة الوكالة العدلية
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(nextToPurchaseInfo).click();
 
 		// ---------------------------Purchaser info------------------------------
@@ -4680,10 +4666,10 @@ public class APNO extends Vars {
 
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 	
@@ -4707,18 +4693,18 @@ public class APNO extends Vars {
 
 //				driver.findElement(Others2).click();
 //				Thread.sleep(Const * 20);
-//				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+//				Runtime.getRuntime().exec(AttachPath);
 //				Thread.sleep(Const * 20);
 				
 				//--wrong Attachments
 			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 			    Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				
 				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
@@ -4728,7 +4714,7 @@ public class APNO extends Vars {
 
 				driver.findElement(IDCardBuyer).click();
 				Thread.sleep(Const * 20);
-				Runtime.getRuntime().exec("C:\\\\Users\\\\nftaiha\\\\Desktop\\\\attachemnts\\\\Uploader.exe");
+				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
 				driver.findElement(NextToLinkPurchaserandBuyers).click();
 
