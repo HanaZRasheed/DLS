@@ -116,6 +116,6 @@ public class Vars extends Fields{
 		String widow="ارمل";
 		String married="متزوج";
 		String divorced="مطلق";
-
+String AttachPath = "C:\\\\\\\\Users\\\\\\\\nftaiha\\\\\\\\Desktop\\\\\\\\attachemnts\\\\\\\\Uploader.exe";
 }
 
