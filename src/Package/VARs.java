@@ -18,7 +18,7 @@ public class Vars extends Fields{
 		// ApplicantType DDL options
 		String purchaser="مشتري";
 		String Vendor="بائع";
-		String BuyerAgent="وكيل مشتري";
+		String SellerAgent="وكيل مشتري";
 		String VendorAgent="وكيل بائع";
 		String realtyOffices ="مكاتب عقارية";
 		
@@ -53,10 +53,10 @@ public class Vars extends Fields{
 
 		
 		// Name fields Contents
-		String buyerInfofield1Content="هناء";
-		String buyerInfofield2Content="زيد";
-		String buyerInfofield3Content="عبدالكريم";
-		String buyerInfofield4Content="الرشيد";
+		String buyerInfoContent1="زيد";
+		String buyerInfoContent2="زيد";
+		String buyerInfoContent3="عبدالكريم";
+		String buyerInfoContent4="الرشيد";
 		
 		
 		String nameasinPassportContent="هناء زيد عبدالكريم الرشيد";// Name as in passport
@@ -117,5 +117,16 @@ public class Vars extends Fields{
 		String married="متزوج";
 		String divorced="مطلق";
 String AttachPath = "C:\\\\\\\\Users\\\\\\\\nftaiha\\\\\\\\Desktop\\\\\\\\attachemnts\\\\\\\\Uploader.exe";
+
+//Original Property
+String directorate = "اراضي اربد";
+String village = "اربد";
+String basin = "001/السياف";
+String neighborhood = "1/النصر";
+String propertyType = "أرض";
+String propertyNumber = "20";
+String License = "10";
+
+
 }
 
