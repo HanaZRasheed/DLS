@@ -49,7 +49,7 @@ public class Fields {
 
 	// Attachments on Purchaser info screen
 	By IDCard = By.className("x22j"); // هوية أحوال مدنية
-	By Passport = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
+	By Passport = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
 	By SecurityCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:4:pgl50\"]/tbody/tr/td[3]/span");// بطاقة أمنية
 	By ResidenceCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:2:pgl50\"]/tbody/tr/td[3]/span");// بطاقة إقامة
 	By Others = By.xpath("");
@@ -61,19 +61,19 @@ public class Fields {
 	By Lamane3 = By.xpath("");// كتاب لا مانع
 	By Others2 = By.xpath("");
 	
-	// Attachments on Buyers attachments section 
-	By IDCardBuyer2 =By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");
-	By IDCardBuyer = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // هوية أحوال مدنية
+	// Attachments on Seller's attachments section 
+	By IDCardSeller2 =By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");
+	By IDCardSeller = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // هوية أحوال مدنية
 	By FormalLetter = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span"); // كتاب رسمي
 	By CoCommercialRecord = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// سجل تجاري للشركة
-	By PassportBuyer = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز السفر
+	By PassportSeller = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز السفر
 
 	//------------------------------------------------Purchaser Info ----------------------
 	// معلومات المشتري 4 حقول
-	By buyerInfofield1 = By.id("pt1:r1:2:it1::content");
-	By buyerInfofield2 = By.id("pt1:r1:2:it2::content");
-	By buyerInfofield3 = By.id("pt1:r1:2:it3::content");
-	By buyerInfofield4 = By.id("pt1:r1:2:it4::content");
+	By BuyerFields1 = By.id("pt1:r1:2:it1::content");
+	By BuyerFields2 = By.id("pt1:r1:2:it2::content");
+	By BuyerFields3 = By.id("pt1:r1:2:it3::content");
+	By BuyerFields4 = By.id("pt1:r1:2:it4::content");
 	By nameasinPassport = By.id("pt1:r1:2:it5::content"); // الاسم حسب جواز السفر
 	By nationality = By.id("pt1:r1:2:soc2::content"); // الجنسيةغ
 	By Othernationality = By.id("pt1:r1:2:soc9::content"); //  جنسية أخرى
@@ -129,7 +129,7 @@ public class Fields {
 	// -------------------------------------------------WifeHusband Info-----------------------
 	//
 	// معلومات الزوجة / الزوج
-	By BuyerName = By.id("pt1:r1:2:soc4::content");
+	By SellerName = By.id("pt1:r1:2:soc4::content");
 	By addButton = By.id("pt1:r1:1:b5");
 	By deleteButton = By.xpath("//*[@id=\"pt1:r1:2:b4\"]/a");
 	By NextToPropertyScnfromWifeSCN = By.id("pt1:r1:1:b2");
@@ -159,19 +159,19 @@ public class Fields {
 	By checkownersB = By.id("pt1:r1:1:pc2:t5:3:sbc2::content"); // - أكثر من بائع - الرجاء اختيار البائعين من قائمة
 	By checkownersA1=By.id("pt1:r1:2:pc2:t5:0:sbc2::content");
     By NonJordanianOwner=By.id("pt1:r1:1:pc2:t5:7:sbc2::content");
-	By NextToBuyerAttach = By.id("pt1:r1:3:b2");													// المالكين
-    By NextToBuyerAttach2 = By.id("pt1:r1:2:b2");
+	By NextToSellerAttach = By.id("pt1:r1:3:b2");													// المالكين
+    By NextToSellerAttach2 = By.id("pt1:r1:2:b2");
 	// use next for التالي
-	// --------------------------------------------------Buyers Info---------------------------
+	// --------------------------------------------------Sellers Info---------------------------
 	// مرفقات البائعين
-	By Properties = By.id("pt1:r1:2:soc1::content"); // العقارات
+    By Properties = By.id("pt1:r1:2:soc1::content"); // العقارات
 	By Owners = By.id("pt1:r1:2:soc2::content"); // المالكين
-	By NextToLinkPurchaserandBuyers = By.id("pt1:r1:4:b466666666"); //  التالي
-    By NextToLinkPurchaserandBuyes2 =By.id("pt1:r1:3:b466666666");
-	//-----------------------Link Purchaser with Buyers---------------------
+	By NextToLinkPurchaserandSellers = By.id("pt1:r1:4:b466666666"); // التالي
+    By NextToLinkPurchaserandSellers2 =By.id("pt1:r1:3:b466666666");
+	//-----------------------Link Purchaser with Sellers---------------------
 	
-    By buyerName = By.id("pt1:r1:5:soc2::content"); // اسم المشتري
-    By buyerName2 = By.id("pt1:r1:4:soc2::content"); // اسم المشتري
+    By VendorName = By.id("pt1:r1:5:soc2::content"); // اسم المشتري
+    By VendorName2 = By.id("pt1:r1:4:soc2::content"); // اسم المشتري
     By PropertiesA2 = By.id("pt1:r1:5:soc1::content"); // العقارات
     By PropertiesB2 = By.id("pt1:r1:4:soc1::content"); // العقارات
     By ownerName = By.id("pt1:r1:5:soc3::content");// اسم المالك
@@ -191,18 +191,18 @@ public class Fields {
 	//----------------------------------------- Property Info------------------------------------
 			// معلومات العقار الاصلي في حالة سكن توسعة *NEW
 			By addOriginalPropertyButton=By.id("pt1:r1:1:b5");
-			By Directorate=By.id("pt1:r1:3:soc5::content");
-			By village=By.id("pt1:r1:3:soc1::content");
-			By BuildingNo=By.id("pt1:r1:3:it6::content");
-			By BasinNo=By.id("pt1:r1:3:it6::content");
-			By neighbourhoodNo=By.id("pt1:r1:3:soc3::content");
-			By apartmentNo=By.id("pt1:r1:3:it1::content");
-			By plateNo=By.id("pt1:r1:3:soc4::content");
-			By propertyType=By.id("pt1:r1:3:soc6::content");
-			By licenseNo=By.id("pt1:r1:3:it3::content");
-			By landNo=By.id("pt1:r1:3:it5::content");
-			By FloorNo =By.id("pt1:r1:3:it7::content");
-			By saveAddedOriginalProperty=By.id("pt1:r1:3:b1");
+			By Directorate=By.id("pt1:r1:2:soc5::content");
+			By Village=By.id("pt1:r1:2:soc1::content");
+			By BuildingNo=By.id("pt1:r1:2:it6::content");
+			By BasinNo=By.id("pt1:r1:2:it6::content");
+			By neighbourhoodNo=By.id("pt1:r1:2:soc3::content");
+			By apartmentNo=By.id("pt1:r1:2:it1::content");
+			By plateNo=By.id("pt1:r1:2:soc4::content");
+			By PropertyType=By.id("pt1:r1:2:soc6::content");
+			By licenseNo=By.id("pt1:r1:2:it3::content");
+			By landNo=By.id("pt1:r1:2:it5::content");
+			By FloorNo =By.id("pt1:r1:2:it7::content");
+			By saveAddedOriginalProperty=By.id("pt1:r1:2:b1");
 			
 		
 		
