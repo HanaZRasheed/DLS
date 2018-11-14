@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -79,7 +80,6 @@ public class APNO extends Vars {
 	// لغايات ادارة الاعمال
 	public void Case1000() throws InterruptedException, IOException {
 		// -----------------------------Applicant info-----------------------------
-
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
 		Thread.sleep(Const * 10);
@@ -97,14 +97,12 @@ public class APNO extends Vars {
 		// Next to Purchaser info
 		Thread.sleep(Const);
 		driver.findElement(nextToPurchaseInfo).click();
-
 		// ---------------------------Purchaser info------------------------------
-
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -175,23 +173,23 @@ public class APNO extends Vars {
 		   Thread.sleep(Const * 20);
 		// ------------------------Purchaser InfoAttachments--------------------
 		   Thread.sleep(Const * 20);
-//		   driver.findElement(Passport).click();
+	   driver.findElement(Passport).click();
+	   Thread.sleep(Const * 20);
+	   Runtime.getRuntime().exec(AttachPath);
+	    Thread.sleep(Const * 10);
+		
+//		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+//		Thread.sleep(Const * 20);
+//		Runtime.getRuntime().exec(AttachPath);
+//		Thread.sleep(Const * 10);
+//		
+//		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 //		Thread.sleep(Const * 20);
 //		Runtime.getRuntime().exec(AttachPath);
 //		Thread.sleep(Const * 10);
 		
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
 		Thread.sleep(Const * 10);
@@ -210,18 +208,18 @@ public class APNO extends Vars {
 	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
-		//-------------------------Buyer's Attachments----------------------
-		//driver.findElement(IDCardBuyer).click();
+		driver.findElement(NextToSellerAttach).click();
+		//-------------------------Seller's Attachments----------------------
+		//driver.findElement(IDCardSeller).click();
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
-	   //--------------------------Link Purchaser with Buyer----------------
+		driver.findElement(NextToLinkPurchaserandSellers).click();
+	   //--------------------------Link Purchaser with Seller ----------------
 		Thread.sleep(Const * 40);
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("0");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("0");
 		Thread.sleep(Const);
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
 		Properties.selectByValue("0");
@@ -241,7 +239,6 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 		driver.findElement(submitRequest).click();
 		Thread.sleep(Const * 50);
-
 	}
 	@Test
 	// لغايات الزراعة
@@ -265,14 +262,14 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
 		Thread.sleep(Const);
 
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
 		Thread.sleep(Const);
 
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -361,8 +358,8 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 30);
 		driver.findElement(NextToWifeHusbandScn).click();
 		// ----------------------------------------Wife-HusbandInfo--------------------------------
-//		Select BuyerName1 = new Select(driver.findElement(BuyerName)); // اسم المشتري
-//		BuyerName1.selectByValue("0");
+//		Select SellerName1 = new Select(driver.findElement(VendorName)); // اسم المشتري
+//		SellerName1.selectByValue("0");
 //		Thread.sleep(Const * 10);
 		//Add button 
 		Thread.sleep(Const * 20);
@@ -402,7 +399,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 40);
 		driver.findElement(NextToPropertyScnfromWifeSCN).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 50);
 
 		driver.findElement(recordNo2).sendKeys("1-6BAE1P"); // رقم القيد
@@ -427,16 +424,16 @@ public class APNO extends Vars {
 //		Thread.sleep(Const * 10);
 //
 //		Thread.sleep(Const * 10);
-//		driver.findElement(NextToBuyerAttach2).click();
+//		driver.findElement(NextToSellerAttach2).click();
 
 	
 			Thread.sleep(Const * 10);
-			driver.findElement(NextToBuyerAttach2).click();
-		//-------------------------Buyer's Attachments----------------------
+			driver.findElement(NextToSellerAttach2).click();
+		//-------------------------Seller's Attachments----------------------
 			Thread.sleep(Const * 20);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 
-//		driver.findElement(IDCardBuyer2).click();
+//		driver.findElement(IDCardSeller2).click();
 		Thread.sleep(Const * 20);
 	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
@@ -446,13 +443,13 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
-		driver.findElement(NextToLinkPurchaserandBuyes2).click();
+		driver.findElement(NextToLinkPurchaserandSellers2).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 20);
 
-		Select BuyerName = new Select(driver.findElement(buyerName2)); // اسم المشتري
-		BuyerName.selectByValue("0");
+		Select SellerName = new Select(driver.findElement(VendorName2)); // اسم المشتري
+		SellerName.selectByValue("0");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesB2)); // العقارات
@@ -502,16 +499,16 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
 		Thread.sleep(Const);
 
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
 		Thread.sleep(Const);
 
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
 		Thread.sleep(Const);
 
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -610,7 +607,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -637,7 +634,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 
-//		driver.findElement(IDCardBuyer2).click();
+//		driver.findElement(IDCardSeller2).click();
 		Thread.sleep(Const * 20);
 	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
@@ -648,21 +645,21 @@ public class APNO extends Vars {
 	Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 30);
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -696,7 +693,7 @@ public class APNO extends Vars {
 
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
-		Thread.sleep(Const * 10);
+		Thread.sleep(Const * 20);
 		// نوع الموافقة
 		driver.findElement(InternalRequestApprovalRadio).click();
 		Select Purpose = new Select(driver.findElement(PurposeOfPossession)); // الغاية الرئيسية
@@ -708,20 +705,42 @@ public class APNO extends Vars {
 		//pt1:r1:1:b5
 		driver.findElement(AddOriginalProperty).click();
        //----------------------Original property -------------------
-		//Back
-		driver.findElement(BackToApplicantInfo).click();
 
-		// Next to Purchaser info
+		Select OriDirectorate = new Select (driver.findElement(Directorate));
+        OriDirectorate.selectByVisibleText(directorate);
+        Thread.sleep(Const * 20);
+        Select Orivillage = new Select (driver.findElement(Village));
+        Orivillage.selectByVisibleText(village);
+        Thread.sleep(Const * 20);
+        Select OriBasinNo = new Select (driver.findElement(BuildingNo));
+        OriBasinNo.selectByVisibleText(basin);
+        Thread.sleep(Const * 20);
+        Select OrineighbourhoodNo = new Select (driver.findElement(neighbourhoodNo));
+        OrineighbourhoodNo.selectByVisibleText(neighborhood);
+        Thread.sleep(Const * 20);
+        Select OripropertyType = new Select (driver.findElement(PropertyType));
+        OripropertyType.selectByVisibleText(propertyType);
+        Thread.sleep(Const * 20);
+        driver.findElement(landNo).sendKeys(propertyNumber);
+        Thread.sleep(Const * 20);
+        driver.findElement(licenseNo).sendKeys(License, Keys.TAB);        
+        Thread.sleep(Const * 20);        
+        driver.findElement(saveAddedOriginalProperty).click();
+        Thread.sleep(Const * 20);
+
+//		//Back
+//		driver.findElement(BackToApplicantInfo).click();
+//
+//		 Next to Purchaser info
 		Thread.sleep(Const);
 		driver.findElement(nextToPurchaseInfo).click();
-
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -811,7 +830,7 @@ public class APNO extends Vars {
 			Thread.sleep(Const * 20);
 			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
 
-//			driver.findElement(IDCardBuyer2).click();
+//			driver.findElement(IDCardSeller2).click();
 			Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 			Thread.sleep(Const * 30);
@@ -824,7 +843,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -849,21 +868,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -914,10 +933,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1017,7 +1036,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -1042,21 +1061,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		//driver.findElement(IDCardBuyer).click();
+		//driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -1109,10 +1128,10 @@ public class APNO extends Vars {
 		driver.findElement(nextToPurchaseInfo).click();
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1203,7 +1222,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
 		Thread.sleep(Const * 10);
@@ -1230,22 +1249,22 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		//driver.findElement(IDCardBuyer).click();
+		//driver.findElement(IDCardSeller).click();
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("0");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("0");
 		Thread.sleep(Const);		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
 		Properties.selectByValue("0");
@@ -1298,10 +1317,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1401,7 +1420,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -1426,21 +1445,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -1495,10 +1514,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1589,7 +1608,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -1614,21 +1633,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -1679,10 +1698,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1778,7 +1797,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -1803,21 +1822,21 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -1866,10 +1885,10 @@ public class APNO extends Vars {
 
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -1958,7 +1977,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -1979,21 +1998,21 @@ public class APNO extends Vars {
 		//Thread.sleep(Const * 20);
 	
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -2043,10 +2062,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2137,7 +2156,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
 
 		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -2158,21 +2177,21 @@ public class APNO extends Vars {
 		//Thread.sleep(Const * 20);
 	
 		Thread.sleep(Const * 10);
-		driver.findElement(NextToBuyerAttach).click();
+		driver.findElement(NextToSellerAttach).click();
 
-		//-------------------------Buyer's Attachments----------------------
+		//-------------------------Seller's Attachments----------------------
 
-		driver.findElement(IDCardBuyer).click();
+		driver.findElement(IDCardSeller).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
 		Thread.sleep(Const * 50);
-		driver.findElement(NextToLinkPurchaserandBuyers).click();
+		driver.findElement(NextToLinkPurchaserandSellers).click();
 
-	   //--------------------------Link Purchaser with Buyer----------------
+	   //--------------------------Link Purchaser with Seller----------------
 		Thread.sleep(Const * 30);
 
-		Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-		BuyerName.selectByValue("1");
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("1");
 		Thread.sleep(Const);
 		
 		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -2222,10 +2241,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2340,10 +2359,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2458,10 +2477,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2575,10 +2594,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2696,10 +2715,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2791,7 +2810,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 
 				driver.findElement(recordNo).sendKeys("1234567"); // رقم القيد
@@ -2803,21 +2822,21 @@ public class APNO extends Vars {
 				//navigateOut
 				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click();
 				Thread.sleep(Const*20);
-                //Buyer's checkBox
+                //Seller's checkBox
 				driver.findElement(By.id("pt1:r1:1:pc2:t5:0:sbc2::content")).click();
 				// ------------------------Property InfoAttachments--------------------
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments---------------------
-				driver.findElement(PassportBuyer).click();
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments---------------------
+				driver.findElement(PassportSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
-			   //--------------------------Link Purchaser with Buyer----------------
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 40);
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -2865,10 +2884,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -2960,7 +2979,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 
 				driver.findElement(recordNo).sendKeys("1234558"); // رقم القيد
@@ -2982,20 +3001,20 @@ public class APNO extends Vars {
 //				Thread.sleep(Const * 20);
 				
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
 
-				driver.findElement(PassportBuyer).click();
+				driver.findElement(PassportSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -3044,10 +3063,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3136,7 +3155,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234557"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -3149,13 +3168,46 @@ public class APNO extends Vars {
 				driver.findElement(By.id("pt1:r1:1:pc2:t5:8:sbc2::content")).click();
 				// ------------------------Property InfoAttachments--------------------
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
+				driver.findElement(PassportSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+				
+				   //--------------------------Link Purchaser with Seller----------------
+				Thread.sleep(Const * 40);
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("0");
+				Thread.sleep(Const);
+				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
+				Properties.selectByValue("0");
+				Thread.sleep(Const);
+				Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
+				OwnerName.selectByValue("0");
+				Thread.sleep(Const);
+				driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
+				Thread.sleep(Const);
+				driver.findElement(areatoBeOwned).sendKeys("40"); //المساحة المراد تملكها كتابة
+				Thread.sleep(Const);
+				driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
+				Thread.sleep(Const*20);
+				driver.findElement(NextToReviewSection).click();
+				Thread.sleep(Const*20);
+				//------------Assert----------
+				
+				Thread.sleep(Const * 20);
+				String ActualResult = driver.findElement(By.xpath("//*[@id=\"pt1:r1:5:m1\"]/div/table/tbody/tr/td/table/tbody/tr/td[2]/div")).getText();
+				String ExpectedResult = "البائع أجنبي وبحاجة لموافقة بيع";
+				Assert.assertTrue(ActualResult.contains(ExpectedResult));
+                System.out.print("Actual" + ActualResult);
+                System.out.print("Expected" + ExpectedResult);               
+				// capture-screenshot
+				TakesScreenshot ts = (TakesScreenshot) driver;
+				File source = ts.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(source, new File(".Screenshots/Case3.2.0.0.png"));	
+				
 	}	
 	@Test
 	//    البائع شركة - مدة الحجز منتهية
@@ -3176,10 +3228,10 @@ public class APNO extends Vars {
 		driver.findElement(nextToPurchaseInfo).click();
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3253,7 +3305,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234556"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -3269,18 +3321,18 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
 				driver.findElement(CoCommercialRecord).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
-			   //--------------------------Link Purchaser with Buyer----------------
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -3327,10 +3379,10 @@ public class APNO extends Vars {
 
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3408,7 +3460,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 
 				driver.findElement(recordNo).sendKeys("1234555"); // رقم القيد
@@ -3425,17 +3477,17 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
 				
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -3482,10 +3534,10 @@ public class APNO extends Vars {
 
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3567,7 +3619,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234554"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -3580,13 +3632,13 @@ public class APNO extends Vars {
 				driver.findElement(By.id("pt1:r1:1:pc2:t5:0:sbc2::content")).click();
 				// ------------------------Property InfoAttachments--------------------
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
+				driver.findElement(IDCardSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
 	}
 	@Test
@@ -3610,10 +3662,10 @@ public class APNO extends Vars {
 
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3691,7 +3743,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234566"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -3705,20 +3757,20 @@ public class APNO extends Vars {
 
 				// ------------------------Property InfoAttachments--------------------
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
+				driver.findElement(NextToSellerAttach).click();
 
-				//-------------------------Buyer's Attachments----------------------
+				//-------------------------Seller's Attachments----------------------
 				driver.findElement(FormalLetter).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -3765,10 +3817,10 @@ public class APNO extends Vars {
 
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -3843,7 +3895,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234565"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -3859,18 +3911,18 @@ public class APNO extends Vars {
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
 				driver.findElement(FormalLetter).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
-			   //--------------------------Link Purchaser with Buyer----------------
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -3920,10 +3972,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
 		Thread.sleep(Const*20);
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -4004,7 +4056,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234564"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -4032,18 +4084,18 @@ public class APNO extends Vars {
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 20);					
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
-				//-------------------------Buyer's Attachments----------------------
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(NextToSellerAttach).click();
+				//-------------------------Seller's Attachments----------------------
+				driver.findElement(IDCardSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);			
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
 				Properties.selectByValue("1");
@@ -4087,10 +4139,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
 		Thread.sleep(Const*20);
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -4166,7 +4218,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1234563"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -4198,21 +4250,21 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
+				driver.findElement(NextToSellerAttach).click();
 
-				//-------------------------Buyer's Attachments----------------------
+				//-------------------------Seller's Attachments----------------------
 
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(IDCardSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -4261,10 +4313,10 @@ public class APNO extends Vars {
 		// ---------------------------Purchaser info------------------------------
 		// معلومات المشتري
 		Thread.sleep(Const*20);
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -4332,13 +4384,22 @@ public class APNO extends Vars {
 		   Thread.sleep(Const * 20);
 		// ------------------------Purchaser InfoAttachments--------------------
 
-		driver.findElement(Passport).click(); //جواز السفر 
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		Thread.sleep(Const * 10);
+//		driver.findElement(Passport).click(); //جواز السفر 
+//		Thread.sleep(Const * 20);
+//		Runtime.getRuntime().exec(AttachPath);
+//		Thread.sleep(Const * 10);
+//		Thread.sleep(Const * 10);
+		   
+			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+			Thread.sleep(Const * 20);
+			Runtime.getRuntime().exec(AttachPath);
+			Thread.sleep(Const * 10);			
+			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
+			Thread.sleep(Const * 20);
+			Runtime.getRuntime().exec(AttachPath);
+			Thread.sleep(Const * 10);			
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 				driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
 				Thread.sleep(Const * 10);
@@ -4346,24 +4407,21 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 10);
 				driver.findElement(schemeNo).sendKeys("522144"); // الرقم المميز للمخطط
 				Thread.sleep(Const);
-				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
-				Thread.sleep(Const*10);
-				
+				driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+				Thread.sleep(Const*10);				
 				// ----------------------Assert-Message-----------------------------------
 				Thread.sleep(Const * 20);
-
 				String ActualResult = driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:m1\"]/div/table/tbody/tr/td/table/tbody/tr/td[2]/div")).getText();
 				String ExpectedResult = "رمز المخطط غير صحيح";
 				Assert.assertTrue(ActualResult.contains(ExpectedResult));
-
+                System.out.print("Actual" + ActualResult);
+                System.out.print("Expected" + ExpectedResult);               
 				// capture-screenshot
-
 				TakesScreenshot ts = (TakesScreenshot) driver;
 				File source = ts.getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(source, new File(".Screenshots/Case5.2.0.0.png"));
-
-			
+				FileUtils.copyFile(source, new File(".Screenshots/Case5.2.0.0.png"));			
 	}
+	
 	@Test
 //  نوع مقدم الطلب "وكيل مشتري"
 	
@@ -4371,7 +4429,7 @@ public class APNO extends Vars {
 		// -----------------------------Applicant info-----------------------------
 
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
-		ApplicantTypeDDL.selectByVisibleText(BuyerAgent); //  وكيل مشتري
+		ApplicantTypeDDL.selectByVisibleText(SellerAgent); //  وكيل مشتري
 		Thread.sleep(Const * 10);
 		driver.findElement(judicialAgencyNo).sendKeys("555"); //*رقم الوكالة العدلية
 		driver.findElement(judicialAgencyDate).sendKeys("2018/11/06");//*تاريخ الوكالة العدلية
@@ -4398,10 +4456,10 @@ public class APNO extends Vars {
 		// معلومات المشتري
 		Thread.sleep(Const*20);
 
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -4485,7 +4543,7 @@ public class APNO extends Vars {
 	
 		
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 
 				driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -4518,21 +4576,21 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
+				driver.findElement(NextToSellerAttach).click();
 
-				//-------------------------Buyer's Attachments----------------------
+				//-------------------------Seller's Attachments----------------------
 
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(IDCardSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
 				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
@@ -4588,10 +4646,10 @@ public class APNO extends Vars {
 		// معلومات المشتري
 		Thread.sleep(Const*20);
 
-		driver.findElement(buyerInfofield1).sendKeys(buyerInfofield1Content);
-		driver.findElement(buyerInfofield2).sendKeys(buyerInfofield2Content);
-		driver.findElement(buyerInfofield3).sendKeys(buyerInfofield3Content);
-		driver.findElement(buyerInfofield4).sendKeys(buyerInfofield4Content);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
 		Thread.sleep(Const);
 		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
 		Thread.sleep(Const);
@@ -4675,7 +4733,7 @@ public class APNO extends Vars {
 	
 		
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
-		// ---------------------Property & Buyer Info ------------------------------
+		// ---------------------Property & Seller Info ------------------------------
 				Thread.sleep(Const * 10);
 
 				driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
@@ -4708,23 +4766,22 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 					
 				Thread.sleep(Const * 10);
-				driver.findElement(NextToBuyerAttach).click();
+				driver.findElement(NextToSellerAttach).click();
 
-				//-------------------------Buyer's Attachments----------------------
+				//-------------------------Seller's Attachments----------------------
 
-				driver.findElement(IDCardBuyer).click();
+				driver.findElement(IDCardSeller).click();
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandBuyers).click();
+				driver.findElement(NextToLinkPurchaserandSellers).click();
 
-			   //--------------------------Link Purchaser with Buyer----------------
+			   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 30);
 
-				Select BuyerName = new Select(driver.findElement(buyerName)); // اسم المشتري
-				BuyerName.selectByValue("1");
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
 				Thread.sleep(Const);
-				
 				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
 				Properties.selectByValue("1");
 				Thread.sleep(Const);
