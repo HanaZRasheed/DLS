@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Package.APNO">
+      <class name="Package.APCO">
         <methods>
+          <include name="Case1000"/>
           <include name="Login"/>
-          <include name="End"/>
-          <include name="Case4500"/>
         </methods>
-      </class> <!-- Package.APNO -->
+      </class> <!-- Package.APCO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

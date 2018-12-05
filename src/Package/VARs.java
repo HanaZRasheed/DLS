@@ -63,13 +63,13 @@ public class VARs extends fields{
 
 		
 		// Name fields Contents
-		String buyerInfofield1Content="هناء";
+		String buyerInfofield1Content="عبدااله";
 		String buyerInfofield2Content="زيد";
 		String buyerInfofield3Content="عبدالكريم";
 		String buyerInfofield4Content="الرشيد";
 		
 		
-		String nameasinPassportContent="هناء زيد عبدالكريم الرشيد";// Name as in passport
+		String nameasinPassportContent="عبدااله زيد عبدالكريم الرشيد";// Name as in passport
 		String phoneNoContent="0797078728"; // رقم الهاتف
 		String passportNumberContent="999555"; // رقم جواز السفر
 		String productionDateContent="2017/10/12"; // تاريخ الاصدار
@@ -80,7 +80,7 @@ public class VARs extends fields{
 		String currentResidenceAddressContent="Amman Khalda"; // مكان الاقامة الحالي
 		String JobContent="مبرمج"; //  المهنة
 		String registrationNoContent="123"; // رقم الدخول
-		String additionalInfoContent="Hana zaid abdlekareem alrasheed"; // معلومات اضافية 
+		String additionalInfoContent="Abdullah zaid abdlekareem alrasheed"; // معلومات اضافية 
 		
 		//  معلومات الام
 		String MomFirstNameContent="الهام";
@@ -174,8 +174,8 @@ public class VARs extends fields{
 		String recordNoContentCase4300="1234560";//  البحث عن طريق رقم القيد- سلطة اقليم العقبة
 		String SchemeNumberContentCase4300="1234560";// البحث عن طريق رقم مميز للمخطط-  سلطة اقليم العقبة
 		
-		String recordNoContentCase4400="1234563";// البحث عن طريق رقم القيد -  سلطة اقليم البتراء
-		String SchemeNumberContentCase4400="1234563";// البحث عن طريق رقم مميز للمخطط- سلطة اقليم البتراء
+		String recordNoContentCase4400="1234559";// البحث عن طريق رقم القيد -  سلطة اقليم البتراء
+		String SchemeNumberContentCase4400="1234559";// البحث عن طريق رقم مميز للمخطط- سلطة اقليم البتراء
 		
 		// اكثر من عقار و كل عقار تابع لجهة تنظيمية 
 		String recordNoContentCase4500A="1234564";// البحث عن طريق رقم القيد
