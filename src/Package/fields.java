@@ -33,23 +33,21 @@ public class Fields {
 	By judicialAgencyDate = By.id("pt1:r1:1:id2::content"); //*تاريخ الوكالة العدلية
 	By permitField1 = By.id("pt1:r1:1:it12::content");
 	By permitField2 = By.id("pt1:r1:1:it13::content");
-	By nextToPurchaseInfo = By.xpath("//*[@id=\"pt1:r1:1:b2\"]/a");
 	
+	By nextToPurchaseInfo = By.xpath("//*[@id=\"pt1:r1:1:b2\"]/a");	
     By AddOriginalProperty = By.id("pt1:r1:1:b5");
+    By AddPurchaser = By.id("pt1:r1:2:b5");
     By OtherPurpose = By.id("pt1:r1:1:it11::content");
-
 //-----------Original Property----------------------------
     By BackToApplicantInfo = By.id("pt1:r1:2:b3");
-
 	// ----------------ATTACHMENTS--------------------------
-
 	// Attachments on Applicant Info Screen
 	By AuthorizationLetter = By.xpath("");// كتاب تفويض
 	By PowerofAttorney = By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// صورة وكالة عدلية
 
 	// Attachments on Purchaser info screen
 	By IDCard = By.className("x22j"); // هوية أحوال مدنية
-	By Passport = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
+	By Passport = By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:5:pgl50\"]/tbody/tr/td[3]/span");// جواز سفر
 	By SecurityCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:4:pgl50\"]/tbody/tr/td[3]/span");// بطاقة أمنية
 	By ResidenceCard = By.xpath("//*[@id=\"pt1:r1:0:pc1:t2:2:pgl50\"]/tbody/tr/td[3]/span");// بطاقة إقامة
 	By Others = By.xpath("");
@@ -70,7 +68,7 @@ public class Fields {
 
 	//------------------------------------------------Purchaser Info ----------------------
 	// معلومات المشتري 4 حقول
-	By BuyerFields1 = By.id("pt1:r1:2:it1::content");
+	By BuyerFields1 = By.id("pt1:r1:2:it1::content"); 
 	By BuyerFields2 = By.id("pt1:r1:2:it2::content");
 	By BuyerFields3 = By.id("pt1:r1:2:it3::content");
 	By BuyerFields4 = By.id("pt1:r1:2:it4::content");
@@ -84,9 +82,9 @@ public class Fields {
 	By passportNumber = By.id("pt1:r1:2:it20::content"); // رقم جواز السفر
 	By productionDate = By.id("pt1:r1:2:id1::content"); // تاريخ الإصدار
 	By ExpiryDate = By.id("pt1:r1:2:id5::content"); // تاريخ الانتهاء
-	By productionLocation = By.id("pt1:r1:2:it21::content"); // مكان الإصدار
-	By arrivalCountry = By.id("pt1:r1:2:soc1::content"); // بلد القدوم
-	By placeOfBirth = By.id("pt1:r1:2:it32::content"); // مكان الولادة
+	By productionLocation = By.id("pt1:r1:2:soc3::content"); //  مكان الإصدار
+	By arrivalCountry = By.id("pt1:r1:2:soc1::content"); //  بلد القدوم
+	By placeOfBirth = By.id("pt1:r1:2:soc10::content"); // مكان الولادة
 
 	By birthDate = By.id("pt1:r1:2:id3::content");// تاريخ الولادة
 	// لديك إقامة بالمملكة
@@ -200,10 +198,10 @@ public class Fields {
 			By plateNo=By.id("pt1:r1:2:soc4::content");
 			By PropertyType=By.id("pt1:r1:2:soc6::content");
 			By licenseNo=By.id("pt1:r1:2:it3::content");
-			By landNo=By.id("pt1:r1:2:it5::content");
+			By landNo=By.id("pt1:r1:0:it5::content");
 			By FloorNo =By.id("pt1:r1:2:it7::content");
 			By saveAddedOriginalProperty=By.id("pt1:r1:2:b1");
-			
+			By Hodd = By.id("pt1:r1:2:soc2::content");
 		
 		
 }
