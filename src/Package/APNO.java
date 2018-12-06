@@ -21,7 +21,6 @@ public class APNO extends Vars {
 
 	Integer Const = 500;
 	WebDriver driver;
-
 	@BeforeTest
 	public void Login() throws InterruptedException {
 		// System.setProperty("webdriver.ie.driver",IEDriver);
@@ -34,7 +33,6 @@ public class APNO extends Vars {
 		driver.get(link);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-
 		driver.findElement(username).sendKeys(usernameContent);
 		Thread.sleep(Const);
 		driver.findElement(Password).sendKeys(passwordContent);
@@ -122,14 +120,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
-		Thread.sleep(Const);
-
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+		Thread.sleep(Const * 10);
+		
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); // مكان الولادة
+		placeOfBirthDDL.selectByVisibleText(emirates);
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -176,12 +175,7 @@ public class APNO extends Vars {
 	   driver.findElement(Passport).click();
 	   Thread.sleep(Const * 20);
 	   Runtime.getRuntime().exec(AttachPath);
-	    Thread.sleep(Const * 10);
-		
-//		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
-//		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec(AttachPath);
-//		Thread.sleep(Const * 10);
+	    Thread.sleep(Const * 10);		
 //		
 //		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
 //		Thread.sleep(Const * 20);
@@ -191,11 +185,11 @@ public class APNO extends Vars {
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
-		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
+		driver.findElement(recordNo).sendKeys("1234563"); // رقم القيد
 		Thread.sleep(Const * 10);
 		driver.findElement(DLSKeyButton).click();
 		Thread.sleep(Const * 10);
-		driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
+		driver.findElement(schemeNo).sendKeys("1234563"); // الرقم المميز للمخطط
 		Thread.sleep(Const);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
 		Thread.sleep(Const);
@@ -591,20 +585,10 @@ public class APNO extends Vars {
 //		driver.findElement(Others).click();
 //		Thread.sleep(Const * 20);
 //		Runtime.getRuntime().exec(AttachPath);
-//		driver.findElement(Passport).click();
-//		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec(AttachPath);
-	Thread.sleep(Const * 10);
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+		driver.findElement(Passport).click();
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		Thread.sleep(Const * 10);
+	
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
 		// ---------------------Property & Seller Info ------------------------------
@@ -712,19 +696,31 @@ public class APNO extends Vars {
         Select Orivillage = new Select (driver.findElement(Village));
         Orivillage.selectByVisibleText(village);
         Thread.sleep(Const * 20);
-        Select OriBasinNo = new Select (driver.findElement(BuildingNo));
-        OriBasinNo.selectByVisibleText(basin);
-        Thread.sleep(Const * 20);
+     
+        //driver.findElement(BuildingNo).sendKeys("452");      
+        Thread.sleep(Const * 30);
+        Select HoddNo = new Select (driver.findElement(Hodd));
+        HoddNo.selectByVisibleText(basin);
+        Thread.sleep(Const * 20);               
         Select OrineighbourhoodNo = new Select (driver.findElement(neighbourhoodNo));
         OrineighbourhoodNo.selectByVisibleText(neighborhood);
         Thread.sleep(Const * 20);
+        //driver.findElement(plateNo).sendKeys("452");
+        Thread.sleep(Const * 20);
+        Select Plate = new Select (driver.findElement(plateNo));
+        Plate.selectByVisibleText(PlateNumber);
+        Thread.sleep(Const * 20);
         Select OripropertyType = new Select (driver.findElement(PropertyType));
-        OripropertyType.selectByVisibleText(propertyType);
+        OripropertyType.selectByVisibleText(Land); //@ardd
         Thread.sleep(Const * 20);
-        driver.findElement(landNo).sendKeys(propertyNumber);
+        driver.findElement(licenseNo).sendKeys(License, Keys.TAB); 
         Thread.sleep(Const * 20);
-        driver.findElement(licenseNo).sendKeys(License, Keys.TAB);        
-        Thread.sleep(Const * 20);        
+
+        driver.findElement(landNo).sendKeys(propertyNumber,Keys.TAB );
+              
+        Thread.sleep(Const * 20);    
+       // driver.findElement(FloorNo).sendKeys("55", Keys.TAB); 
+
         driver.findElement(saveAddedOriginalProperty).click();
         Thread.sleep(Const * 20);
 
@@ -1122,7 +1118,7 @@ public class APNO extends Vars {
 		//fill purpose
 		driver.findElement(OtherPurpose).sendKeys("nn"); //غايات أخرى
 		//navigate out
-				driver.findElement(By.id("pt1:r1:1:s1")).click();
+		driver.findElement(By.id("pt1:r1:1:s1")).click();
 		// Next to Purchaser info
 		Thread.sleep(Const*20);
 		driver.findElement(nextToPurchaseInfo).click();
@@ -1170,25 +1166,20 @@ public class APNO extends Vars {
 		GenderDDL.selectByVisibleText(female); // أنثى
 		Thread.sleep(Const * 10);
 		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
-		 SocialStatusDDL.selectByVisibleText(single); //أعزب
+		SocialStatusDDL.selectByVisibleText(single); //أعزب
 		//SocialStatusDDL.selectByVisibleText(married); // متزوج
 		Thread.sleep(Const * 10);
 		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
 		Thread.sleep(Const * 10);
-
 		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
 		Thread.sleep(Const);
-
 		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
 		Thread.sleep(Const);
-
 		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
 		Thread.sleep(Const);
-
 		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
 		motherNationalityDDL.selectByVisibleText(Jordanian);
 		Thread.sleep(Const);
-
 		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
 		Thread.sleep(Const);
 		// معلومات الام
@@ -1200,40 +1191,28 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
 		   Thread.sleep(Const * 20);
-
 		// ------------------------Purchaser InfoAttachments--------------------
-
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
 		//Runtime.getRuntime().exec(AttachPath);
-//		driver.findElement(Passport).click();
-//		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec(AttachPath);
-//		Thread.sleep(Const * 10);
-			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
-			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec(AttachPath);
-			Thread.sleep(Const * 10);
-			
-			driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
-			Thread.sleep(Const * 20);
-			Runtime.getRuntime().exec(AttachPath);
-			Thread.sleep(Const * 10);
-		Thread.sleep(Const * 10);
+		driver.findElement(Passport).click();
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 10);			
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
 		// ---------------------Property & Seller Info ------------------------------
 		Thread.sleep(Const * 10);
-		driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
+		driver.findElement(recordNo).sendKeys("1234562"); // رقم القيد
 		Thread.sleep(Const * 10);
 		driver.findElement(DLSKeyButton).click();
 		Thread.sleep(Const * 10);
-		driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
+		driver.findElement(schemeNo).sendKeys("1234562"); // الرقم المميز للمخطط
 		Thread.sleep(Const);
 		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
 		Thread.sleep(Const);
-		//driver.findElement(OwnersCheckbox).click();
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();
+		driver.findElement(OwnersCheckbox).click();
+		//driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();
 		
 		
 		// ------------------------Property InfoAttachments--------------------
@@ -1403,21 +1382,11 @@ public class APNO extends Vars {
 		//driver.findElement(Others).click();
 		//Thread.sleep(Const * 20);
 		//Runtime.getRuntime().exec(AttachPath);
-//		driver.findElement(Passport).click();
-//		Thread.sleep(Const * 20);
-//		Runtime.getRuntime().exec(AttachPath);
-//		Thread.sleep(Const * 10);
+		driver.findElement(Passport).click();
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 10);
 
-		Thread.sleep(Const * 10);
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
-		
-		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
-		Thread.sleep(Const * 10);
 		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
 
 		// ---------------------Property & Seller Info ------------------------------
@@ -2043,7 +2012,6 @@ public class APNO extends Vars {
 	//  المشتري اماراتي الجنسية
 	public void Case2200() throws InterruptedException, IOException {
 		// -----------------------------Applicant info-----------------------------
-
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
 		Thread.sleep(Const * 10);
@@ -2054,13 +2022,10 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 20);
 		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
 		Purpose2.selectByVisibleText(Residence);
-		
 		// Next to Purchaser info
 		Thread.sleep(Const);
 		driver.findElement(nextToPurchaseInfo).click();
-
 		// ---------------------------Purchaser info------------------------------
-
 		// معلومات المشتري
 		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
 		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
@@ -2087,50 +2052,37 @@ public class APNO extends Vars {
 		Thread.sleep(Const * 10);
 		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
 		Thread.sleep(Const);
-
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-
 		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
-
 		driver.findElement(YesResidency).click(); // -نعم - لديك إقامة بالمملكة
 		Thread.sleep(Const * 10);
 		driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
 		Thread.sleep(Const * 10);
-
 		driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
 		Thread.sleep(Const);
-
 		Select GenderDDL = new Select(driver.findElement(Gender)); // الجنس
 		GenderDDL.selectByVisibleText(female); // أنثى
 		Thread.sleep(Const * 10);
-
 		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
 		// SocialStatusDDL.selectByVisibleText(single); //أعزب
 		SocialStatusDDL.selectByVisibleText(married); // متزوج
-
 		Thread.sleep(Const * 10);
-
 		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
 		Thread.sleep(Const * 10);
-
 		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
 		Thread.sleep(Const);
-
 		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
 		Thread.sleep(Const);
-
 		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
 		Thread.sleep(Const);
-
 		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
 		motherNationalityDDL.selectByVisibleText(Jordanian);
 		Thread.sleep(Const);
-
 		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
 		Thread.sleep(Const);
 		// معلومات الام
@@ -2142,7 +2094,6 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
 		   Thread.sleep(Const * 20);
-
 		// ------------------------Purchaser InfoAttachments--------------------
 
 //		driver.findElement(Others).click();
@@ -3122,18 +3073,13 @@ public class APNO extends Vars {
 
 		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
 		Thread.sleep(Const);
-
 		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
 		Thread.sleep(Const);
-
 		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
 		Thread.sleep(Const);
-		
-
 		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
 		motherNationalityDDL.selectByVisibleText(Jordanian);
 		Thread.sleep(Const);
-
 		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
 		Thread.sleep(Const);
 		// معلومات الام
@@ -3145,10 +3091,7 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
 		   Thread.sleep(Const * 20);
-
 		// ------------------------Purchaser InfoAttachments--------------------
-
-
 		driver.findElement(Passport).click(); //جواز السفر 
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
@@ -3174,8 +3117,7 @@ public class APNO extends Vars {
 				Thread.sleep(Const * 20);
 				Runtime.getRuntime().exec(AttachPath);
 				Thread.sleep(Const * 50);
-				driver.findElement(NextToLinkPurchaserandSellers).click();
-				
+				driver.findElement(NextToLinkPurchaserandSellers).click();				
 				   //--------------------------Link Purchaser with Seller----------------
 				Thread.sleep(Const * 40);
 				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
@@ -4124,8 +4066,8 @@ public class APNO extends Vars {
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
 		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
 		Thread.sleep(Const * 10);
-		driver.findElement(ExpressRequestCheckBox).click(); //طلب مستعجل
-		Thread.sleep(Const * 10);
+		//driver.findElement(ExpressRequestCheckBox).click(); //طلب مستعجل
+		//Thread.sleep(Const * 10);
 		// نوع الموافقة
 		driver.findElement(InternalRequestApprovalRadio).click();
 		Select Purpose = new Select(driver.findElement(PurposeOfPossession)); // الغاية الرئيسية
@@ -4421,19 +4363,391 @@ public class APNO extends Vars {
 				File source = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(source, new File(".Screenshots/Case5.2.0.0.png"));			
 	}
-	
 	@Test
-//  نوع مقدم الطلب "وكيل مشتري"
+//  نوع مقدم الطلب " مشتري"
 	
     public void Case6000() throws InterruptedException, IOException {
 		// -----------------------------Applicant info-----------------------------
 
 		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
-		ApplicantTypeDDL.selectByVisibleText(SellerAgent); //  وكيل مشتري
+		ApplicantTypeDDL.selectByVisibleText(purchaser); //   مشتري
+		Thread.sleep(Const * 10);
+		// نوع الموافقة
+		driver.findElement(InternalRequestApprovalRadio).click();
+		Select Purpose = new Select(driver.findElement(PurposeOfPossession)); // الغاية الرئيسية
+		Purpose.selectByVisibleText(Residential);
+		Thread.sleep(Const * 20);
+		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
+		Purpose2.selectByVisibleText(Residence);
+		// Next to Purchaser info
+		Thread.sleep(Const);
+	    driver.findElement(nextToPurchaseInfo).click();
+
+		// ---------------------------Purchaser info------------------------------
+		// معلومات المشتري
+		Thread.sleep(Const*20);
+
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
+		Thread.sleep(Const);
+		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
+		Thread.sleep(Const);
+		Select NationalityDDL = new Select(driver.findElement(nationality)); // الجنسية
+		NationalityDDL.selectByVisibleText(Egyptian);
+		Thread.sleep(Const);
+		driver.findElement(phoneNumber).sendKeys(phoneNoContent); // رقم الهاتف
+		Select CountryDDL = new Select(driver.findElement(CountryCode)); // الرمز الدولي
+		CountryDDL.selectByVisibleText(code1);
+		Thread.sleep(Const);
+		Select passportTypeDDL = new Select(driver.findElement(passportType)); // نوع جواز السفر
+		passportTypeDDL.selectByVisibleText(Permenant);
+		Thread.sleep(Const);
+		driver.findElement(passportNumber).sendKeys(passportNumberContent); // رقم جواز السفر
+		Thread.sleep(Const);
+		driver.findElement(productionDate).sendKeys(productionDateContent); // تاريخ الاصدار
+		Thread.sleep(Const);
+		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
+		Thread.sleep(Const * 10);
+		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Thread.sleep(Const);
+
+		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
+		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
+		Thread.sleep(Const * 10);
+		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Thread.sleep(Const * 10);
+		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
+		Thread.sleep(Const * 10);
+		driver.findElement(NoResidency).click(); // -نعم - لديك إقامة بالمملكة
+		Thread.sleep(Const * 10);
+		driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
+		Thread.sleep(Const * 10); 
+		driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const);
+		Select GenderDDL = new Select(driver.findElement(Gender)); // الجنس
+		GenderDDL.selectByVisibleText(female); // أنثى
+		Thread.sleep(Const * 10);
+		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
+		SocialStatusDDL.selectByVisibleText(single); //أعزب
+		//SocialStatusDDL.selectByVisibleText(married); // متزوج
+		Thread.sleep(Const * 10);
+		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const * 10);
+		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
+		Thread.sleep(Const);
+
+		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
+		Thread.sleep(Const);
+
+		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
+		Thread.sleep(Const);
+		
+
+		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
+		motherNationalityDDL.selectByVisibleText(Jordanian);
+		Thread.sleep(Const);
+
+		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
+		Thread.sleep(Const);
+		// معلومات الام
+		driver.findElement(MomFirstName).sendKeys(MomFirstNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomSecondName).sendKeys(MomSecondNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomThirdName).sendKeys(MomThirdNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
+		   Thread.sleep(Const * 20);
+
+		// ------------------------Purchaser InfoAttachments--------------------
+
+//		driver.findElement(Others).click();
+//		Thread.sleep(Const * 20);
+//		Runtime.getRuntime().exec(AttachPath);
+		driver.findElement(Passport).click(); //جواز السفر 
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 10);
+		Thread.sleep(Const * 10);
+	
+		
+		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
+		// ---------------------Property & Seller Info ------------------------------
+				Thread.sleep(Const * 10);
+
+				driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
+				Thread.sleep(Const * 10);
+				driver.findElement(DLSKeyButton).click();
+				Thread.sleep(Const * 10);
+				driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
+				Thread.sleep(Const);
+				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+				Thread.sleep(Const*10);
+				driver.findElement(NonJordanianOwner).click();
+				driver.findElement(NonJordanianOwner).click();
+
+				// ------------------------Property InfoAttachments--------------------
+
+//				driver.findElement(Others2).click();
+//				Thread.sleep(Const * 20);
+//				Runtime.getRuntime().exec(AttachPath);
+//				Thread.sleep(Const * 20);
+				
+				//--wrong Attachments
+			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
+			    Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 20);
+				
+				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+				Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 20);
+					
+				Thread.sleep(Const * 10);
+				driver.findElement(NextToSellerAttach).click();
+
+				//-------------------------Seller's Attachments----------------------
+
+				driver.findElement(IDCardSeller).click();
+				Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 50);
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+
+			   //--------------------------Link Purchaser with Seller----------------
+				Thread.sleep(Const * 30);
+
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
+				Thread.sleep(Const);
+				
+				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
+				Properties.selectByValue("1");
+				Thread.sleep(Const);
+
+				Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
+				OwnerName.selectByValue("1");
+				Thread.sleep(Const);
+				
+				driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
+				Thread.sleep(Const);
+				
+				driver.findElement(areatoBeOwned).sendKeys("40"); //المساحة المراد تملكها كتابة
+				Thread.sleep(Const);
+				
+				driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
+				Thread.sleep(Const*20);
+				driver.findElement(NextToReviewSection).click();
+				Thread.sleep(Const*20);
+			//---------------------------Review Section ------------------------
+				Thread.sleep(Const * 20);
+				driver.findElement(submitRequest).click();
+				Thread.sleep(Const * 50);
+	}
+	@Test
+//  نوع مقدم الطلب " wakeel ba2e3"
+	
+    public void Case6300() throws InterruptedException, IOException {
+		// -----------------------------Applicant info-----------------------------
+
+		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
+		ApplicantTypeDDL.selectByVisibleText(VendorAgent); //   wakeel ba2e3
+		Thread.sleep(Const * 10);
 		Thread.sleep(Const * 10);
 		driver.findElement(judicialAgencyNo).sendKeys("555"); //*رقم الوكالة العدلية
 		driver.findElement(judicialAgencyDate).sendKeys("2018/11/06");//*تاريخ الوكالة العدلية
+		Thread.sleep(Const * 10);
+		// نوع الموافقة
+		driver.findElement(InternalRequestApprovalRadio).click();
+		Select Purpose = new Select(driver.findElement(PurposeOfPossession)); // الغاية الرئيسية
+		Purpose.selectByVisibleText(Residential);
+		Thread.sleep(Const * 20);
+		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
+		Purpose2.selectByVisibleText(Residence);
+		// Next to Purchaser info
+		Thread.sleep(Const);
+		driver.findElement(PowerofAttorney).click(); // صورة الوكالة العدلية
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+	    driver.findElement(nextToPurchaseInfo).click();
 
+		// ---------------------------Purchaser info------------------------------
+		// معلومات المشتري
+		Thread.sleep(Const*20);
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
+		Thread.sleep(Const);
+		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
+		Thread.sleep(Const);
+		Select NationalityDDL = new Select(driver.findElement(nationality)); // الجنسية
+		NationalityDDL.selectByVisibleText(Egyptian);
+		Thread.sleep(Const);
+		driver.findElement(phoneNumber).sendKeys(phoneNoContent); // رقم الهاتف
+		Select CountryDDL = new Select(driver.findElement(CountryCode)); // الرمز الدولي
+		CountryDDL.selectByVisibleText(code1);
+		Thread.sleep(Const);
+		Select passportTypeDDL = new Select(driver.findElement(passportType)); // نوع جواز السفر
+		passportTypeDDL.selectByVisibleText(Permenant);
+		Thread.sleep(Const);
+		driver.findElement(passportNumber).sendKeys(passportNumberContent); // رقم جواز السفر
+		Thread.sleep(Const);
+		driver.findElement(productionDate).sendKeys(productionDateContent); // تاريخ الاصدار
+		Thread.sleep(Const);
+		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
+		Thread.sleep(Const * 10);
+		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Thread.sleep(Const);
+
+		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
+		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
+		Thread.sleep(Const * 10);
+		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Thread.sleep(Const * 10);
+		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
+		Thread.sleep(Const * 10);
+		driver.findElement(NoResidency).click(); // -نعم - لديك إقامة بالمملكة
+		Thread.sleep(Const * 10);
+		driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
+		Thread.sleep(Const * 10); 
+		driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const);
+		Select GenderDDL = new Select(driver.findElement(Gender)); // الجنس
+		GenderDDL.selectByVisibleText(female); // أنثى
+		Thread.sleep(Const * 10);
+		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
+		SocialStatusDDL.selectByVisibleText(single); //أعزب
+		//SocialStatusDDL.selectByVisibleText(married); // متزوج
+		Thread.sleep(Const * 10);
+		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const * 10);
+		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
+		Thread.sleep(Const);
+
+		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
+		Thread.sleep(Const);
+
+		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
+		Thread.sleep(Const);
+		
+
+		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
+		motherNationalityDDL.selectByVisibleText(Jordanian);
+		Thread.sleep(Const);
+
+		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
+		Thread.sleep(Const);
+		// معلومات الام
+		driver.findElement(MomFirstName).sendKeys(MomFirstNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomSecondName).sendKeys(MomSecondNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomThirdName).sendKeys(MomThirdNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
+		   Thread.sleep(Const * 20);
+
+		// ------------------------Purchaser InfoAttachments--------------------
+
+//		driver.findElement(Others).click();
+//		Thread.sleep(Const * 20);
+//		Runtime.getRuntime().exec(AttachPath);
+		driver.findElement(Passport).click(); //جواز السفر 
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 10);
+		Thread.sleep(Const * 10);
+	
+		
+		driver.findElement(nextToPrpertyInfoFromPurchaserInfo).click();
+		// ---------------------Property & Seller Info ------------------------------
+				Thread.sleep(Const * 10);
+
+				driver.findElement(recordNo).sendKeys("1-6BAE1P"); // رقم القيد
+				Thread.sleep(Const * 10);
+				driver.findElement(DLSKeyButton).click();
+				Thread.sleep(Const * 10);
+				driver.findElement(schemeNo).sendKeys("1-6BAE1P"); // الرقم المميز للمخطط
+				Thread.sleep(Const);
+				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+				Thread.sleep(Const*10);
+				driver.findElement(NonJordanianOwner).click();
+				driver.findElement(NonJordanianOwner).click();
+
+				// ------------------------Property InfoAttachments--------------------
+
+//				driver.findElement(Others2).click();
+//				Thread.sleep(Const * 20);
+//				Runtime.getRuntime().exec(AttachPath);
+//				Thread.sleep(Const * 20);
+				
+				//--wrong Attachments
+			 	driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
+			    Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 20);
+				
+				driver.findElement(By.xpath("//*[@id=\"pt1:r1:1:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+				Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 20);
+					
+				Thread.sleep(Const * 10);
+				driver.findElement(NextToSellerAttach).click();
+
+				//-------------------------Seller's Attachments----------------------
+
+				driver.findElement(IDCardSeller).click();
+				Thread.sleep(Const * 20);
+				Runtime.getRuntime().exec(AttachPath);
+				Thread.sleep(Const * 50);
+				driver.findElement(NextToLinkPurchaserandSellers).click();
+
+			   //--------------------------Link Purchaser with Seller----------------
+				Thread.sleep(Const * 30);
+
+				Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+				SellerName.selectByValue("1");
+				Thread.sleep(Const);
+				
+				Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
+				Properties.selectByValue("1");
+				Thread.sleep(Const);
+
+				Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
+				OwnerName.selectByValue("1");
+				Thread.sleep(Const);
+				
+				driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
+				Thread.sleep(Const);
+				
+				driver.findElement(areatoBeOwned).sendKeys("40"); //المساحة المراد تملكها كتابة
+				Thread.sleep(Const);
+				
+				driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
+				Thread.sleep(Const*20);
+				driver.findElement(NextToReviewSection).click();
+				Thread.sleep(Const*20);
+			//---------------------------Review Section ------------------------
+				Thread.sleep(Const * 20);
+				driver.findElement(submitRequest).click();
+				Thread.sleep(Const * 50);
+	}
+	@Test
+//  نوع مقدم الطلب "وكيل مشتري"
+	
+    public void Case6200() throws InterruptedException, IOException {
+		// -----------------------------Applicant info-----------------------------
+
+		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
+		ApplicantTypeDDL.selectByVisibleText(BuyerAgent); //  وكيل مشتري
+		Thread.sleep(Const * 10);
+		driver.findElement(judicialAgencyNo).sendKeys("555"); //*رقم الوكالة العدلية
+		driver.findElement(judicialAgencyDate).sendKeys("2018/11/06");//*تاريخ الوكالة العدلية
 		//driver.findElement(ExpressRequestCheckBox).click();
 		Thread.sleep(Const * 10);
 
@@ -4445,8 +4759,7 @@ public class APNO extends Vars {
 		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
 		Purpose2.selectByVisibleText(Residence);
 		// Next to Purchaser info
-		Thread.sleep(Const);
-		
+		Thread.sleep(Const);		
 		driver.findElement(PowerofAttorney).click(); // صورة الوكالة العدلية
 		Thread.sleep(Const * 20);
 		Runtime.getRuntime().exec(AttachPath);
@@ -4636,10 +4949,6 @@ public class APNO extends Vars {
 		Purpose2.selectByVisibleText(Residence);
 		// Next to Purchaser info
 		Thread.sleep(Const);
-		
-		driver.findElement(PowerofAttorney).click(); // صورة الوكالة العدلية
-		Thread.sleep(Const * 20);
-		Runtime.getRuntime().exec(AttachPath);
 		driver.findElement(nextToPurchaseInfo).click();
 
 		// ---------------------------Purchaser info------------------------------
@@ -4805,5 +5114,251 @@ public class APNO extends Vars {
 				driver.findElement(submitRequest).click();
 				Thread.sleep(Const * 50);
 	}
+	@Test
+	// multi purchasers and properties
+	public void Case7000() throws InterruptedException, IOException {
+		// -----------------------------Applicant info-----------------------------
+		Select ApplicantTypeDDL = new Select(driver.findElement(ApplicantType));
+		ApplicantTypeDDL.selectByVisibleText(purchaser); // مشتري
+		Thread.sleep(Const * 10);
+		// نوع الموافقة
+		driver.findElement(InternalRequestApprovalRadio).click();
+		Select Purpose = new Select(driver.findElement(PurposeOfPossession)); // الغاية الرئيسية
+		Purpose.selectByVisibleText(Commercial_Office);
+		Thread.sleep(Const * 20);
+		Select Purpose2 = new Select(driver.findElement(SecondaryPurposeOfPossession)); // الغاية الفرعية
+		Purpose2.selectByVisibleText(BussinessAdministration);
+		// رقم وطني للمنشأة
+		driver.findElement(CoNationalNumber).sendKeys("987445215");
+		//Navigate out
+				driver.findElement(By.id("pt1:r1:1:s1")).click();
+		// Next to Purchaser info
+		Thread.sleep(Const);
+		driver.findElement(nextToPurchaseInfo).click();
+		Thread.sleep(Const * 20);
+		// ---------------------------Purchaser info------------------------------
+		// معلومات المشتري
+		driver.findElement(BuyerFields1).sendKeys(buyerInfoContent1);
+		driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+		driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+		driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
+		Thread.sleep(Const);
+		driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
+		Thread.sleep(Const);
+		Select NationalityDDL = new Select(driver.findElement(nationality)); // الجنسية
+		NationalityDDL.selectByVisibleText(Egyptian);
+		Thread.sleep(Const);
+		driver.findElement(phoneNumber).sendKeys(phoneNoContent); // رقم الهاتف
+		Select CountryDDL = new Select(driver.findElement(CountryCode)); // الرمز الدولي
+		CountryDDL.selectByVisibleText(code1);
+		Thread.sleep(Const);
+		Select passportTypeDDL = new Select(driver.findElement(passportType)); // نوع جواز السفر
+		passportTypeDDL.selectByVisibleText(Permenant);
+		Thread.sleep(Const);
+		driver.findElement(passportNumber).sendKeys(passportNumberContent); // رقم جواز السفر
+		Thread.sleep(Const);
+		driver.findElement(productionDate).sendKeys(productionDateContent); // تاريخ الاصدار
+		Thread.sleep(Const);
+		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
+		Thread.sleep(Const * 10);
+		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Thread.sleep(Const);
 
+		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
+		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
+		Thread.sleep(Const * 10);
+
+		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Thread.sleep(Const * 10);
+		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
+		Thread.sleep(Const * 10);
+
+		driver.findElement(NoResidency).click(); // -لا - لديك إقامة بالمملكة
+		Thread.sleep(Const * 10);
+		driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
+		Thread.sleep(Const * 10);
+
+		driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const);
+
+		Select GenderDDL = new Select(driver.findElement(Gender)); // الجنس
+		GenderDDL.selectByVisibleText(female); // أنثى
+		Thread.sleep(Const * 10);
+		Select SocialStatusDDL = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
+		SocialStatusDDL.selectByVisibleText(single); //أعزب
+		//SocialStatusDDL.selectByVisibleText(married); // متزوج
+		Thread.sleep(Const * 10);
+		driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
+		Thread.sleep(Const * 10);
+		driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
+		Thread.sleep(Const);
+		driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
+		Thread.sleep(Const);
+		driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
+		Thread.sleep(Const);
+		Select motherNationalityDDL = new Select(driver.findElement(motherNationality)); // جنسية الام
+		motherNationalityDDL.selectByVisibleText(Jordanian);
+		Thread.sleep(Const);
+		driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
+		Thread.sleep(Const);
+		// معلومات الام
+		driver.findElement(MomFirstName).sendKeys(MomFirstNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomSecondName).sendKeys(MomSecondNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomThirdName).sendKeys(MomThirdNameContent);
+		Thread.sleep(Const);
+		driver.findElement(MomLastName).sendKeys(MomLastNameContent);
+		   Thread.sleep(Const * 20);
+		// ------------------------Purchaser InfoAttachments--------------------
+		   Thread.sleep(Const * 20);
+	   driver.findElement(Passport).click();
+	   Thread.sleep(Const * 20);
+	   Runtime.getRuntime().exec(AttachPath);
+	    Thread.sleep(Const * 10);		
+//		
+//		driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
+//		Thread.sleep(Const * 20);
+//		Runtime.getRuntime().exec(AttachPath);
+//		Thread.sleep(Const * 10);
+		
+		driver.findElement(AddPurchaser).click();
+		   Thread.sleep(Const * 20);
+
+		// ---------------------------Second Purchaser info------------------------------
+				// معلومات المشتري
+				driver.findElement(BuyerFields1).sendKeys(buyerInfoContentName2);
+				driver.findElement(BuyerFields2).sendKeys(buyerInfoContent2);
+				driver.findElement(BuyerFields3).sendKeys(buyerInfoContent3);
+				driver.findElement(BuyerFields4).sendKeys(buyerInfoContent4);
+				Thread.sleep(Const);
+				driver.findElement(nameasinPassport).sendKeys(nameasinPassportContent); // الاسم حسب جواز السفر
+				Thread.sleep(Const);
+				Select NationalityDDL2 = new Select(driver.findElement(nationality)); // الجنسية
+				NationalityDDL2.selectByVisibleText(Egyptian);
+				Thread.sleep(Const);
+				driver.findElement(phoneNumber).sendKeys(phoneNoContent); // رقم الهاتف
+				Select CountryDDL2 = new Select(driver.findElement(CountryCode)); // الرمز الدولي
+				CountryDDL2.selectByVisibleText(code1);
+				Thread.sleep(Const);
+				Select passportTypeDDL2 = new Select(driver.findElement(passportType)); // نوع جواز السفر
+				passportTypeDDL2.selectByVisibleText(Permenant);
+				Thread.sleep(Const);
+				driver.findElement(passportNumber).sendKeys(passportNumberContent); // رقم جواز السفر
+				Thread.sleep(Const);
+				driver.findElement(productionDate).sendKeys(productionDateContent); // تاريخ الاصدار
+				Thread.sleep(Const);
+				driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
+				Thread.sleep(Const * 10);
+				driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+				Thread.sleep(Const);
+
+				Select arrivalCountryDDL2 = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
+				arrivalCountryDDL2.selectByVisibleText(AbuDhabi);
+				Thread.sleep(Const * 10);
+
+				driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+				Thread.sleep(Const * 10);
+				driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
+				Thread.sleep(Const * 10);
+
+				driver.findElement(NoResidency).click(); // -لا - لديك إقامة بالمملكة
+				Thread.sleep(Const * 10);
+				driver.findElement(noProperty).click(); // لا - هل لديك عقارات داخل المملكة؟
+				Thread.sleep(Const * 10);
+
+				driver.findElement(currentResidenceAddress).sendKeys(currentResidenceAddressContent); // عنوان الإقامة الحالية
+				Thread.sleep(Const);
+
+				Select GenderDDL2 = new Select(driver.findElement(Gender)); // الجنس
+				GenderDDL2.selectByVisibleText(female); // أنثى
+				Thread.sleep(Const * 10);
+				Select SocialStatusDDL2 = new Select(driver.findElement(socialStatus)); // الحالة الاجتماعية
+				SocialStatusDDL2.selectByVisibleText(single); //أعزب
+				//SocialStatusDDL.selectByVisibleText(married); // متزوج
+				Thread.sleep(Const * 10);
+				driver.findElement(job).sendKeys(JobContent); // عنوان الإقامة الحالية
+				Thread.sleep(Const * 10);
+				driver.findElement(registrationNo).sendKeys(registrationNoContent); // رقم الدخول
+				Thread.sleep(Const);
+				driver.findElement(additionalInfo).sendKeys(additionalInfoContent); // معلومات اضافية
+				Thread.sleep(Const);
+				driver.findElement(noOtherNationality).click();// - لا - جنسية أخرى
+				Thread.sleep(Const);
+				Select motherNationalityDDL2 = new Select(driver.findElement(motherNationality)); // جنسية الام
+				motherNationalityDDL2.selectByVisibleText(Jordanian);
+				Thread.sleep(Const);
+				driver.findElement(insideKigdom).click();// - نعم - هل المستدعى له داخل المملكة؟
+				Thread.sleep(Const);
+				// معلومات الام
+				driver.findElement(MomFirstName).sendKeys(MomFirstNameContent);
+				Thread.sleep(Const);
+				driver.findElement(MomSecondName).sendKeys(MomSecondNameContent);
+				Thread.sleep(Const);
+				driver.findElement(MomThirdName).sendKeys(MomThirdNameContent);
+				Thread.sleep(Const);
+				driver.findElement(MomLastName).sendKeys(MomLastNameContent);
+				   Thread.sleep(Const * 20);
+				// ------------------------Purchaser InfoAttachments--------------------
+				   Thread.sleep(Const * 20);
+			   driver.findElement(By.xpath("//*[@id=\"pt1:r1:2:pc1:t2:13:pgl50\"]/tbody/tr/td[3]/span")).click();
+			   Thread.sleep(Const * 20);
+			   Runtime.getRuntime().exec(AttachPath);
+			    Thread.sleep(Const * 10);	
+				driver.findElement(By.id("pt1:r1:2:b2")).click(); 
+				
+		// ---------------------Property & Seller Info ------------------------------
+		Thread.sleep(Const * 10);
+		driver.findElement(recordNo).sendKeys("1234564"); // رقم القيد
+		Thread.sleep(Const * 10);
+		driver.findElement(DLSKeyButton).click();
+		Thread.sleep(Const * 10);
+		driver.findElement(schemeNo).sendKeys("1234564"); // الرقم المميز للمخطط
+		Thread.sleep(Const);
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pgl5\"]/div[4]")).click(); // click-anywhere-to-navigate-out
+		Thread.sleep(Const);
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc2:t5:0:sbc2::content\"]")).click();		
+		// ------------------------Property InfoAttachments--------------------
+		Thread.sleep(Const * 20);
+//	driver.findElement(CoRegistrationCertificate).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:3:pc1:t2:1:pgl50\"]/tbody/tr/td[3]/span")).click();
+	Thread.sleep(Const * 20);
+	Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 10);
+		Thread.sleep(Const * 10);
+		
+		
+		
+		driver.findElement(NextToSellerAttach).click();
+		//-------------------------Seller's Attachments----------------------
+		//driver.findElement(IDCardSeller).click();
+		driver.findElement(By.xpath("//*[@id=\"pt1:r1:4:pc1:t2:0:pgl50\"]/tbody/tr/td[3]/span")).click();
+		Thread.sleep(Const * 20);
+		Runtime.getRuntime().exec(AttachPath);
+		Thread.sleep(Const * 50);
+		driver.findElement(NextToLinkPurchaserandSellers).click();
+	   //--------------------------Link Purchaser with Seller ----------------
+		Thread.sleep(Const * 40);
+		Select SellerName = new Select(driver.findElement(VendorName)); // اسم المشتري
+		SellerName.selectByValue("0");
+		Thread.sleep(Const);
+		Select Properties = new Select(driver.findElement(PropertiesA2)); // العقارات
+		Properties.selectByValue("0");
+		Thread.sleep(Const);
+		Select OwnerName = new Select(driver.findElement(ownerName)); //اسم المالك
+		OwnerName.selectByValue("0");
+		Thread.sleep(Const);
+		driver.findElement(areatoBeOwnedNum).sendKeys("40"); //المساحة المراد تملكها رقما
+		Thread.sleep(Const);
+		driver.findElement(areatoBeOwned).sendKeys("40"); //المساحة المراد تملكها كتابة
+		Thread.sleep(Const);
+		driver.findElement(numberofProportions).sendKeys("2"); // الحصص المراد تملكها رقما
+		Thread.sleep(Const*20);
+		driver.findElement(NextToReviewSection).click();
+		Thread.sleep(Const*20);
+	//---------------------------Review Section ------------------------
+		Thread.sleep(Const * 20);
+		driver.findElement(submitRequest).click();
+		Thread.sleep(Const * 50);
+	}
 }
