@@ -120,14 +120,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation));
+		// مكان الاصدار
 		productionLocationDDL.selectByVisibleText(emirates);
 		Thread.sleep(Const * 10);
 		
-		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
+		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); 
+		// بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
 		placeOfBirthDDL.selectByVisibleText(emirates);
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
@@ -285,14 +287,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -522,14 +527,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -756,14 +764,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -952,14 +963,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -1147,12 +1161,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -1319,14 +1336,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -1506,14 +1526,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -1690,14 +1713,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 30);
@@ -1877,12 +1903,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2050,12 +2079,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2215,14 +2247,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2333,14 +2368,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2451,14 +2489,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2568,14 +2609,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2689,14 +2733,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -2858,14 +2905,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3037,14 +3087,17 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3193,12 +3246,15 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3344,13 +3400,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3499,13 +3558,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3627,13 +3689,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3782,13 +3847,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -3937,13 +4005,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4104,13 +4175,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4278,13 +4352,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4410,13 +4487,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4600,13 +4680,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4792,13 +4875,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));  
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -4978,13 +5064,16 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth));
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -5161,14 +5250,18 @@ public class APNO extends Vars {
 		Thread.sleep(Const);
 		driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 		Thread.sleep(Const * 10);
-		driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+		Select productionLocationDDL = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+		productionLocationDDL.selectByVisibleText(emirates);
+
 		Thread.sleep(Const);
 
 		Select arrivalCountryDDL = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 		arrivalCountryDDL.selectByVisibleText(AbuDhabi);
 		Thread.sleep(Const * 10);
 
-		driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+		Select placeOfBirthDDL = new Select(driver.findElement(placeOfBirth)); 
+		
+		placeOfBirthDDL.selectByVisibleText(emirates); // مكان الولادة
 		Thread.sleep(Const * 10);
 		driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 		Thread.sleep(Const * 10);
@@ -5250,14 +5343,17 @@ public class APNO extends Vars {
 				Thread.sleep(Const);
 				driver.findElement(ExpiryDate).sendKeys(ExpiryDateContent); // تاريخ الانتهاء
 				Thread.sleep(Const * 10);
-				driver.findElement(productionLocation).sendKeys(productionLocationContent); // مكان الاصدار
+				Select productionLocationDDL1 = new Select(driver.findElement(productionLocation)); // مكان الاصدار // مكان الاصدار
+				productionLocationDDL1.selectByVisibleText(emirates);
+
 				Thread.sleep(Const);
 
 				Select arrivalCountryDDL2 = new Select(driver.findElement(arrivalCountry)); // بلد القدوم
 				arrivalCountryDDL2.selectByVisibleText(AbuDhabi);
 				Thread.sleep(Const * 10);
 
-				driver.findElement(placeOfBirth).sendKeys(placeOfBirthContent); // مكان الولادة
+				Select placeOfBirthDDL1 = new Select(driver.findElement(placeOfBirth)); 
+				placeOfBirthDDL1.selectByVisibleText(emirates); // مكان الولادة
 				Thread.sleep(Const * 10);
 				driver.findElement(birthDate).sendKeys(dateOfBirthContent); // تاريخ الولادة
 				Thread.sleep(Const * 10);
