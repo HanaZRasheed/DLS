@@ -7,30 +7,24 @@ public class Vars extends Fields{
 		String ChromeDriver = "C:\\\\\\\\Users\\\\\\\\nftaiha\\\\\\\\git\\\\\\\\MoH\\\\\\\\MoH\\\\\\\\src\\\\\\\\MoH\\\\\\\\chromedriver.exe";
 		
 	//Link 	
-		String link="http://172.16.0.38:7003/dlseservices/faces/index";
-	
-		
+		String link="http://172.16.0.38:7003/dlseservices/faces/index";		
 		// Log in credentials 
 		String usernameContent="Omran_Rabieh";
 		String passwordContent="Oo@123";
-		String verificationCodeContent="moict";
-		
+		String verificationCodeContent="moict";		
 		// ApplicantType DDL options
 		String purchaser="مشتري";
 		String Vendor="بائع";
-		String SellerAgent="وكيل مشتري";
+		String BuyerAgent="وكيل مشتري";
 		String VendorAgent="وكيل بائع";
-		String realtyOffices ="مكاتب عقارية";
-		
+		String realtyOffices ="مكاتب عقارية";		
 		// PurposeOfPossession DDL options
 		String Residential="سكن";
 		String Agriculture="زراعة";
 		String industry="صناعة";
 		String FinanceLease="تأجير تمويلي";
 		String Commercial_Office="تجارية_مكاتب"; //ادارة أعمال
-		String RepairnadDischargeDevelopment="اصلاح وافراز وتطوير";
-		
-		
+		String RepairnadDischargeDevelopment="اصلاح وافراز وتطوير";				
 		// SecondaryPurposeOfPossession DDL options - Residential
 		String utilizationOfBuilding ="استغلال البناء المقام";
 		String OtherPurposes="اخرى";
@@ -53,7 +47,8 @@ public class Vars extends Fields{
 
 		
 		// Name fields Contents
-		String buyerInfoContent1="زيد";
+		String buyerInfoContent1="حمد";
+		String buyerInfoContentName2 = "كريم";
 		String buyerInfoContent2="زيد";
 		String buyerInfoContent3="عبدالكريم";
 		String buyerInfoContent4="الرشيد";
@@ -122,8 +117,9 @@ String AttachPath = "C:\\\\\\\\Users\\\\\\\\nftaiha\\\\\\\\Desktop\\\\\\\\attach
 String directorate = "اراضي اربد";
 String village = "اربد";
 String basin = "001/السياف";
+String PlateNumber ="";
 String neighborhood = "1/النصر";
-String propertyType = "أرض";
+String Land = "أرض";
 String propertyNumber = "20";
 String License = "10";
 
